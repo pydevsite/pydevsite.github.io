@@ -20,7 +20,7 @@
 	<tr align="center" bgcolor="#eeeeee" valign="top">
 		<td nowrap="nowrap" class="td_top">
 		<center>
-		<p class="header_text">Last Site Update: December 3rd, 2020 |
+		<p class="header_text">Last Site Update: December 5th, 2020 |
 		Latest Version: 8.0.1</p>
 		</center>
 		</td>
@@ -849,6 +849,8 @@ LiClipse you directly support the development of PyDev).</p>
 
 <a href="https://vpn-review.com/vpn-for-android" border=0><img class="sponsors" style="width:150px;height:100px;" src="images/sponsors/vpn-review.png" alt="best VPN for Android" title="best VPN for Android" /></a>
 
+<a href="https://aussiecasinohex.com/" border=0><img class="sponsors" style="width:150px;height:100px;" src="images/sponsors/aussiecasinohex.png" alt="AussieCasinoHEX.com" title="AussieCasinoHEX.com" /></a>
+
 </div>
 
 <script>
@@ -857,7 +859,43 @@ shuffleEntries("gold-sponsors-a-hrefs", 4);
 <div class="section" id="supporting-pydev">
 <h1>Supporting PyDev</h1>
 <p>Thank you to all PyDev supporters: <a class="reference external" href="https://www.brainwy.com/supporters/PyDev">https://www.brainwy.com/supporters/PyDev</a>.</p>
-<p>To show your appreciation for PyDev and to keep it going strong, help to crowdfund through <a class="reference external" href="https://www.patreon.com/fabioz">https://www.patreon.com/fabioz</a>.</p>
+<p>To show your appreciation for PyDev and to keep it going strong, help to crowdfund it through <a class="reference external" href="https://www.patreon.com/fabioz">https://www.patreon.com/fabioz</a>.</p>
+</div>
+<div class="section" id="release-8-1-0-2020-12-05">
+<h1>Release 8.1.0 (2020-12-05)</h1>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt><strong>Interactive Console</strong></dt>
+<dd><ul class="first last">
+<li>The selection for which console to open may be saved. (<strong>#PyDev-1112</strong>)</li>
+<li>When the <strong>current editor</strong> option is selected, the related interpreter is no longer asked. (<strong>#PyDev-1112</strong>)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>Debugger</strong> (updated to pydevd 2.2.0)</dt>
+<dd><ul class="first last">
+<li>Better support for Python flags when auto-attaching to subprocesses.</li>
+<li>Fixes to path translation (when debugging in a different machine).</li>
+<li>Catch warnings related to <strong>imp</strong> import from <strong>pkg_resources</strong>.</li>
+<li>No longer crashing when running with <strong>Pyjion</strong> (patch by Anthony Shaw).</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>Others</strong></dt>
+<dd><ul class="first last">
+<li>Code analysis now supports <strong>from __future__ import anotations</strong>. (<strong>#PyDev-1040</strong>)</li>
+<li>AST pretty-printing supports printing slices. (<strong>#PyDev-1106</strong>)</li>
+<li>Code-completion with auto imports for the builtin module is no longer shown. (<strong>#PyDev-1117</strong>)</li>
+<li>MyPy messages from a different file are no longer shown in the current editor. (<strong>#PyDev-1114</strong>)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
 </div>
 <div class="section" id="release-8-0-1-2020-11-07">
 <h1>Release 8.0.1 (2020-11-07)</h1>
@@ -914,67 +952,6 @@ shuffleEntries("gold-sponsors-a-hrefs", 4);
 <li>The IScopedPreferences API is now used auto-import and code-folding preferences (patch by Andreas Pakulat)</li>
 <li>Show correct line numbers in problems view for analysis items (patch by Zeckie)</li>
 <li>PyLint message with round brackets now properly handled. (<strong>#PyDev-1107</strong>, patch by Zeckie)</li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
-</div>
-<div class="section" id="release-8-0-0-2020-09-06">
-<h1>Release 8.0.0 (2020-09-06)</h1>
-<ul class="simple">
-<li><dl class="first docutils">
-<dt><strong>MyPy</strong></dt>
-<dd><ul class="first last">
-<li>Make sure that only one MyPy is running at a given time (to prevent cache corruptions).</li>
-<li>Properly report MyPy messages that only have a line number. (<strong>#PyDev-1091</strong>)</li>
-<li>MyPy integration now also shows notes for a message. (<strong>#PyDev-1088</strong>)</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt><strong>Debugger</strong>  (updated to pydevd 2.0.0)</dt>
-<dd><ul class="first last">
-<li>The frame evaluation mode (which adds programmatic breakpoints by rewriting bytecode) was redone (it had a critical issue which could make it skip breakpoints).</li>
-<li>Fixed issue collecting try..except information.</li>
-<li>Fixed issue evaluating numpy array with unexpected dimension.</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt><strong>Type Inference</strong></dt>
-<dd><ul class="first last">
-<li>Option to create a method at a given class properly considers type-hinting. (<strong>#PyDev-1092</strong>)</li>
-<li>Support code-completion for Optional[]. (<strong>#PyDev-1089</strong>)</li>
-<li>Properly handle type information when given as a string. (<strong>#PyDev-1082</strong>, <strong>#PyDev-1087</strong>)</li>
-<li>Fixed issue where line/col was not forwarded properly in go to definition. (<strong>#PyDev-1075</strong>)</li>
-<li>Typing info should have priority when available. (<strong>#PyDev-1079</strong>)</li>
-<li>Properly get completions considering function annotation. (<strong>#PyDev-1078</strong>)</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt><strong>Test running</strong></dt>
-<dd><ul class="first last">
-<li>Fixed issue running tests which override <em>address</em> with nose. (<strong>#PYDev-1095</strong>)</li>
-<li>Fixed issue where test import/export didn't deal well with binary chars that were collected from the test. (<strong>#PyDev-1067</strong>)</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt><strong>Others</strong></dt>
-<dd><ul class="first last">
-<li>When finding a file in a project on Windows consider paths as case insensitive.</li>
-<li>.mypy_cache and .pytest_cache contents are now marked as derived (so they can be filtered out in searches).</li>
-<li>Fixed case where auto-import could be added to wrong location. (<strong>#PyDev-1085</strong>)</li>
-<li>Occurrence was not found in type hint return. (<strong>#PyDev-1076</strong>)</li>
-<li>Find references not working for constant depending how it's used. (<strong>#PyDev-1083</strong>)</li>
-<li>Backported fix to properly parse raw f-string in Python 3.6. (<strong>#PyDev-991</strong>)</li>
-<li>Code completion inside f-strings. (<strong>#PyDev-1081</strong>)</li>
 </ul>
 </dd>
 </dl>
