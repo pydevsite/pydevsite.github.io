@@ -25,7 +25,10 @@ p {
 	color: #303030;
 }
 
-
+div {
+	display: inline-block;
+	vertical-align: top;
+}
 
 img.no_border {
     margin-top: 20px;
@@ -211,6 +214,7 @@ a:active {
 }
 .td_right2 {
 	border-collapse=collapse;
+	vertical-align: text-top;
 }
 .td_right3 {
 	border-collapse=collapse;
