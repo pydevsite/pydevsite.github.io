@@ -1,0 +1,129 @@
+Manifest-Version: 1.0
+Created-By: 1.8.0_172 (Oracle Corporation)
+
+Name: plugins/org.python.pydev.debug.source_8.1.0.202012051215.jar
+SHA-256-Digest: zKmV7ISsJc+q2JqiW8WFUp2wCFZusTCv2QfFfywyLGk=
+
+Name: features/org.python.pydev.feature_8.1.0.202012051215.jar
+SHA-256-Digest: ztYvmOoVbE3EWlqmvCtfx+mColtwdwpMw6UhpNjbYUI=
+
+Name: content.xml.xz
+SHA-256-Digest: jIVAmdTvA4G77dVtg2WEHZduVsuf2s/q+KCTUFoxpN4=
+
+Name: plugins/org.python.pydev.shared_core.source_8.1.0.202012051215.j
+ ar
+SHA-256-Digest: KbXCroUVBSMRMtsP25LYAqJd829pB+ZUzw45WmY2RTg=
+
+Name: plugins/org.python.pydev.shared_interactive_console_8.1.0.202012
+ 051215.jar
+SHA-256-Digest: VhsvF/2W5WZuPaYYK3NSxWyQ7hMlyEgprSPIgBFaO/E=
+
+Name: plugins/com.python.pydev.debug_8.1.0.202012051215.jar
+SHA-256-Digest: tAedcSIW8pKQFE9yksgiRxpLtgRcUicUloYOUQ7l5sU=
+
+Name: plugins/org.python.pydev.jython.source_8.1.0.202012051215.jar
+SHA-256-Digest: LATPfLzrqjPuSMpZRwgDqN+KrHJ3Rd2PFqiSnbftfTA=
+
+Name: plugins/org.python.pydev.core.source_8.1.0.202012051215.jar
+SHA-256-Digest: c/xFwE2NWkQ5MApd2Ctq+kqXlz9AjL6nbxYfWx23BZA=
+
+Name: features/org.python.pydev.feature.source_8.1.0.202012051215.jar
+SHA-256-Digest: YFQY0BMB1otzfjxavgMX9GA4kd5lM8WqjAYoTYDwy+4=
+
+Name: plugins/org.python.pydev.refactoring_8.1.0.202012051215.jar
+SHA-256-Digest: EiWyf/lmD3g7RrdSD6lR2uMT6LyEkb0qBeYLwc9nm34=
+
+Name: plugins/com.python.pydev.debug.source_8.1.0.202012051215.jar
+SHA-256-Digest: vLl9bTd61LoeTwKJ7AwKh+EcmYVEIB0S97J3FA0mcy0=
+
+Name: p2.index
+SHA-256-Digest: prm2/xokF5jMqtfavL03W1TQPp92I+ysmdEHHezAxjk=
+
+Name: plugins/org.python.pydev.parser.source_8.1.0.202012051215.jar
+SHA-256-Digest: l+W706dcJJOByjiQHhI3o0PVgKJCXAAFtVdySxhPnOw=
+
+Name: plugins/org.python.pydev.shared_interactive_console.source_8.1.0
+ .202012051215.jar
+SHA-256-Digest: tIVv4SYVrgCUyc4sy+6E1O0iffFJKJHF+D0JqS9yTis=
+
+Name: plugins/com.python.pydev.analysis.source_8.1.0.202012051215.jar
+SHA-256-Digest: /zwHLo8uiaB7xUAsIPMv06r4RqAdauNtZORZJ9DpYn0=
+
+Name: content.jar
+SHA-256-Digest: /euJgRRtgO9ZS6r04kN66N3d4EgcPtpNXRQQl8PjDQ8=
+
+Name: plugins/org.python.pydev.customizations.source_8.1.0.20201205121
+ 5.jar
+SHA-256-Digest: Lm1ibVJEIu2jpfa7afot1RJU/8VMiyFb9+0kR8lwapg=
+
+Name: plugins/org.python.pydev.ast.source_8.1.0.202012051215.jar
+SHA-256-Digest: 8xYtBFYU92vToogejHDClJetYRyOls8SxR4WPIK3WWU=
+
+Name: plugins/org.python.pydev.shared_ui_8.1.0.202012051215.jar
+SHA-256-Digest: eHjt5z3ngg6I9Xux8N4cFkEzeIqX4q+5xEzZx8uFFrw=
+
+Name: plugins/org.python.pydev.django_8.1.0.202012051215.jar
+SHA-256-Digest: V4sZw0OPe0muQBVZ6twFymAhXBQnohsvGpC+Q2OpPEU=
+
+Name: plugins/org.python.pydev.ast_8.1.0.202012051215.jar
+SHA-256-Digest: 6V9bcStibCqrkVxcNMmP673XKl5ygLxCCY0JnIojgjI=
+
+Name: plugins/com.python.pydev.refactoring.source_8.1.0.202012051215.j
+ ar
+SHA-256-Digest: 9lJh2xHnbdVYqhRYt4SxYpqma4/wuvutyG9FiGd/wXU=
+
+Name: plugins/org.python.pydev.mylyn_0.6.0.jar
+SHA-256-Digest: SKaUFW9QlWDf2aZzUfy/Fwf/+nN/YXS0pkcwCZNTja8=
+
+Name: plugins/org.python.pydev.shared_ui.source_8.1.0.202012051215.jar
+SHA-256-Digest: yjyzcmW32kVgXTlYp9ZRbOoF0UqYqsPfZx00wLrI8mo=
+
+Name: plugins/com.python.pydev.analysis_8.1.0.202012051215.jar
+SHA-256-Digest: P/EclPv8m6DsHchaI3vCqsLLWFWLWoDWiBMTJsg9H5U=
+
+Name: plugins/org.python.pydev.debug_8.1.0.202012051215.jar
+SHA-256-Digest: 4OA0urdt/cs9q03QO98+pDJlYOJa+A9faLDQitY+uMs=
+
+Name: artifacts.xml.xz
+SHA-256-Digest: Qqm3kmA0GuGuq5rWZyMbFP2oi/9Ph170l3JhxsHLGBI=
+
+Name: plugins/org.python.pydev.help_8.1.0.202012051215.jar
+SHA-256-Digest: WgwUwmyWnoTRcqMD98Na7Iurs6n0U93XCPsiuoITIfc=
+
+Name: plugins/org.python.pydev.django.source_8.1.0.202012051215.jar
+SHA-256-Digest: IJNcNboy/h6A9awfcx8fGKkS7YJXs3J9ovaMEKM1DPA=
+
+Name: plugins/org.python.pydev_8.1.0.202012051215.jar
+SHA-256-Digest: xnCS2F2qeg+kaAHgdWLsmnwFfyByo60cEZP37POfIjU=
+
+Name: plugins/org.python.pydev.source_8.1.0.202012051215.jar
+SHA-256-Digest: 0hPeDesPV44hlJv3Gcw6vGFqMggbTTrE9WxMb+0C1IY=
+
+Name: plugins/org.python.pydev.parser_8.1.0.202012051215.jar
+SHA-256-Digest: iPGVaOcFpvfSblSOUrLGMPXLfPddgdi+DZX9K60Ou34=
+
+Name: artifacts.jar
+SHA-256-Digest: ouNhLbtN1hJJnrO5iuz1KZWbCWtIpU0Jf9huTbiCvi4=
+
+Name: plugins/org.python.pydev.customizations_8.1.0.202012051215.jar
+SHA-256-Digest: uCJQl97pgNTxhsvg9JwpRjAPMUpRsbwVweMTTO5TCeM=
+
+Name: features/org.python.pydev.mylyn.feature_0.6.0.jar
+SHA-256-Digest: GZi7sqXQ5lagx4bJ6NXmcjhYyqahpcQlLFCV0XA2tUI=
+
+Name: plugins/org.python.pydev.core_8.1.0.202012051215.jar
+SHA-256-Digest: KkS0h6SRRf6gTdayW14rAW0eGnC3EWKlXahWDtjb9II=
+
+Name: plugins/org.python.pydev.jython_8.1.0.202012051215.jar
+SHA-256-Digest: 44BfbgSK8mzzQfYeodKD60BwCmksb661DbdnhU864Ic=
+
+Name: plugins/org.python.pydev.refactoring.source_8.1.0.202012051215.j
+ ar
+SHA-256-Digest: Vst14qhX6vcuSQsDI82jTFlciLoojDzosqtGx9F6jfk=
+
+Name: plugins/com.python.pydev.refactoring_8.1.0.202012051215.jar
+SHA-256-Digest: qvbjUvv9CI1iF7wh7VIMPMgPRRVP3gv82x/BItn0qx8=
+
+Name: plugins/org.python.pydev.shared_core_8.1.0.202012051215.jar
+SHA-256-Digest: HiIgru9Zo+B8KbK2gZFnhrV41PM7/FBaz2sC3FC3Cco=
+
