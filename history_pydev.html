@@ -20,8 +20,8 @@
 	<tr align="center" bgcolor="#eeeeee" valign="top">
 		<td nowrap="nowrap" class="td_top">
 		<center>
-		<p class="header_text">Last Site Update: February 18th, 2021 |
-		Latest Version: 8.1.0</p>
+		<p class="header_text">Last Site Update: February 21st, 2021 |
+		Latest Version: 8.2.0</p>
 		</center>
 		</td>
 	</tr>
@@ -278,6 +278,64 @@
 
 <div class="section" id="history-for-pydev">
 <h1>History For PyDev</h1>
+<div class="section" id="release-8-2-0-2021-02-21">
+<h2>Release 8.2.0 (2021-02-21)</h2>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt><strong>External linters</strong></dt>
+<dd><ul class="first last">
+<li>Flake8 can now be used with PyDev (<strong>#PyDev-1127</strong>)</li>
+<li><dl class="first docutils">
+<dt>A <strong>single PyLint/Mypy/Flake8</strong> call is done when code analysis for a <strong>folder</strong>. (<strong>#PyDev-1126</strong>)</dt>
+<dd><ul class="first last">
+<li>Note: must be manually requested by <strong>right clicking a folder</strong> and selecting <strong>PyDev &gt; Code analysis</strong>.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>Comments are now added by default at the current indentation</strong></dt>
+<dd><ul class="first last">
+<li>Works better with code-formatters that change comments such as Black.</li>
+<li>An option is still available to add <strong>#</strong> to the line start.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>Code analysis</strong></dt>
+<dd><ul class="first last">
+<li>Fix for duplicated signature with <strong>&#64;overload</strong>. (patch by Vito De Tullio)</li>
+<li>Fix for undefined variable in return type annotations for classes &quot;in construction&quot; with <strong>from __future__ import annotations</strong>. (<strong>#PyDev-1125</strong>)</li>
+<li>A class recognizes internal references to itself. (<strong>#PyDev-401</strong>)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>Improvements in interpreter configuration</strong></dt>
+<dd><ul class="first last">
+<li>Various UI improvements.</li>
+<li>It is now possible to add an interpreter from Conda. (<strong>#PyDev-1122</strong>)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>Others</strong></dt>
+<dd><ul class="first last">
+<li>New preferences page to configure <strong>Path Mappings</strong> (for remote debugging). (<strong>#PyDev-1119</strong>)</li>
+<li><strong>XXX</strong> was added as a default <strong>TODO</strong> tag.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
 <div class="section" id="release-8-0-1-2020-11-07">
 <h2>Release 8.0.1 (2020-11-07)</h2>
 <ul class="simple">
