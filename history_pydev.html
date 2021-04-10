@@ -20,8 +20,8 @@
 	<tr align="center" bgcolor="#eeeeee" valign="top">
 		<td nowrap="nowrap" class="td_top">
 		<center>
-		<p class="header_text">Last Site Update: April 5th, 2021 |
-		Latest Version: 8.2.0</p>
+		<p class="header_text">Last Site Update: April 10th, 2021 |
+		Latest Version: 8.3.0</p>
 		</center>
 		</td>
 	</tr>
@@ -278,6 +278,56 @@
 
 <div class="section" id="history-for-pydev">
 <h1>History For PyDev</h1>
+<div class="section" id="release-8-3-0-2021-04-10">
+<h2>Release 8.3.0 (2021-04-10)</h2>
+<ul class="simple">
+<li><strong>Java 11</strong> is now required to run PyDev.</li>
+<li><dl class="first docutils">
+<dt><strong>Debugger</strong> (updated to pydevd 2.4.0)</dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt>Step into function</dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt>When debugging it's now possible to:</dt>
+<dd><ul class="first last">
+<li><strong>Ctrl + Alt</strong>, then <strong>Click</strong> function to step into it.</li>
+<li>Position caret at function then <strong>Ctrl + F5</strong> to step into it.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>Note: still a work in progress (please report if it doesn't work on some case).</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>External linters</strong></dt>
+<dd><ul class="first last">
+<li>Configurations of the linters can be saved to the project or user settings (<strong>#PyDev-1139</strong>)</li>
+<li>Flake8 has a more flexible UI for configuration. (<strong>#PyDev-1144</strong>)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>Others</strong></dt>
+<dd><ul class="first last">
+<li>Option to add comments all at a single indent (note: this is now the default). (<strong>#PyDev-1141</strong>)</li>
+<li>LRU for context-insensitive completion/quick fix. (<strong>#PyDev-1142</strong>)</li>
+<li>Fixed some code-completion cases where <strong>self</strong> was wrongly added. (<strong>#PyDev-1134</strong>)</li>
+<li>Environment variables are now supported in <strong>.pydevproject</strong> (expected format: <strong>${env_var:VAR_NAME}</strong>). (<strong>#PyDev-1137</strong>)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
 <div class="section" id="release-8-2-0-2021-02-21">
 <h2>Release 8.2.0 (2021-02-21)</h2>
 <ul class="simple">

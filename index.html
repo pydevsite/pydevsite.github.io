@@ -20,8 +20,8 @@
 	<tr align="center" bgcolor="#eeeeee" valign="top">
 		<td nowrap="nowrap" class="td_top">
 		<center>
-		<p class="header_text">Last Site Update: April 5th, 2021 |
-		Latest Version: 8.2.0</p>
+		<p class="header_text">Last Site Update: April 10th, 2021 |
+		Latest Version: 8.3.0</p>
 		</center>
 		</td>
 	</tr>
@@ -950,6 +950,56 @@ shuffleEntries("gold-sponsors-a-hrefs");
 <p>Thank you to all PyDev supporters: <a class="reference external" href="https://www.brainwy.com/supporters/PyDev">https://www.brainwy.com/supporters/PyDev</a>.</p>
 <p>To show your appreciation for PyDev and to keep it going strong, help to crowdfund it through <a class="reference external" href="https://www.patreon.com/fabioz">https://www.patreon.com/fabioz</a>.</p>
 </div>
+<div class="section" id="release-8-3-0-2021-04-10">
+<h1>Release 8.3.0 (2021-04-10)</h1>
+<ul class="simple">
+<li><strong>Java 11</strong> is now required to run PyDev.</li>
+<li><dl class="first docutils">
+<dt><strong>Debugger</strong> (updated to pydevd 2.4.0)</dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt>Step into function</dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt>When debugging it's now possible to:</dt>
+<dd><ul class="first last">
+<li><strong>Ctrl + Alt</strong>, then <strong>Click</strong> function to step into it.</li>
+<li>Position caret at function then <strong>Ctrl + F5</strong> to step into it.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>Note: still a work in progress (please report if it doesn't work on some case).</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>External linters</strong></dt>
+<dd><ul class="first last">
+<li>Configurations of the linters can be saved to the project or user settings (<strong>#PyDev-1139</strong>)</li>
+<li>Flake8 has a more flexible UI for configuration. (<strong>#PyDev-1144</strong>)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>Others</strong></dt>
+<dd><ul class="first last">
+<li>Option to add comments all at a single indent (note: this is now the default). (<strong>#PyDev-1141</strong>)</li>
+<li>LRU for context-insensitive completion/quick fix. (<strong>#PyDev-1142</strong>)</li>
+<li>Fixed some code-completion cases where <strong>self</strong> was wrongly added. (<strong>#PyDev-1134</strong>)</li>
+<li>Environment variables are now supported in <strong>.pydevproject</strong> (expected format: <strong>${env_var:VAR_NAME}</strong>). (<strong>#PyDev-1137</strong>)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
 <div class="section" id="release-8-2-0-2021-02-21">
 <h1>Release 8.2.0 (2021-02-21)</h1>
 <ul class="simple">
@@ -1002,42 +1052,6 @@ shuffleEntries("gold-sponsors-a-hrefs");
 <dd><ul class="first last">
 <li>New preferences page to configure <strong>Path Mappings</strong> (for remote debugging). (<strong>#PyDev-1119</strong>)</li>
 <li><strong>XXX</strong> was added as a default <strong>TODO</strong> tag.</li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
-</div>
-<div class="section" id="release-8-1-0-2020-12-05">
-<h1>Release 8.1.0 (2020-12-05)</h1>
-<ul class="simple">
-<li><dl class="first docutils">
-<dt><strong>Interactive Console</strong></dt>
-<dd><ul class="first last">
-<li>The selection for which console to open may be saved. (<strong>#PyDev-1112</strong>)</li>
-<li>When the <strong>current editor</strong> option is selected, the related interpreter is no longer asked. (<strong>#PyDev-1112</strong>)</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt><strong>Debugger</strong> (updated to pydevd 2.2.0)</dt>
-<dd><ul class="first last">
-<li>Better support for Python flags when auto-attaching to subprocesses.</li>
-<li>Fixes to path translation (when debugging in a different machine).</li>
-<li>Catch warnings related to <strong>imp</strong> import from <strong>pkg_resources</strong>.</li>
-<li>No longer crashing when running with <strong>Pyjion</strong> (patch by Anthony Shaw).</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt><strong>Others</strong></dt>
-<dd><ul class="first last">
-<li>Code analysis now supports <strong>from __future__ import anotations</strong>. (<strong>#PyDev-1040</strong>)</li>
-<li>AST pretty-printing supports printing slices. (<strong>#PyDev-1106</strong>)</li>
-<li>Code-completion with auto imports for the builtin module is no longer shown. (<strong>#PyDev-1117</strong>)</li>
-<li>MyPy messages from a different file are no longer shown in the current editor. (<strong>#PyDev-1114</strong>)</li>
 </ul>
 </dd>
 </dl>
