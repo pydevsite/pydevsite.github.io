@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="description" content="PyDev Manual" />
 <meta name="keywords" content="pydev, python, ide, eclipse, manual, Tutorial, reference, PyDev" />
-<title>Launching</title>
+<title>MyPy</title>
 
 <!-- stylesheet -->
 <link href="stylesheet.css" rel="stylesheet" type="text/css" />
@@ -177,100 +177,83 @@
 
 		<td  width="64%" class="td_right3" align="left" valign="top">
 			<table width="100%" bgcolor="#c0c0c0"><tbody><tr align="center">
-			<td      align="left"  width="50%"><a href="manual_adv_editor_prefs.html">Previous (Editor preferences)</a>
+			<td      align="left"  width="50%"><a href="manual_adv_pylint.html">Previous (PyLint)</a>
 			</td><td align="left"  width="30%"><a href="manual_adv_features.html">Root</a>
-			</td><td align="right" width="20%"><a href="manual_adv_markoccurrences.html">Next (Mark Occurrences)</a>
+			</td><td align="right" width="20%"><a href="manual_adv_quick_outline.html">Next (Quick Outline)</a>
 			</td>
 			</tr></tbody></table>
             <br/>
             <br/>
 			
-<div id="Content" style="padding: 5px;">
-<h1><a name="PyDevLaunching-Launching%2FDebuggingPythonscripts"></a>Launching/Debugging Python scripts</h1>
 
 
-<h1><a name="PyDevLaunching-RegularLaunch"></a>Regular Launch</h1>
-
-<p>The easiest way of launching a python file from PyDev is opening an editor and using the <b>F9 keybinding</b>. Through that command, PyDev will create/reuse a <b>launch</b> config to run the current editor based on the <b>current settings of the project</b> (i.e.: if the project is configured as IronPython, it'll use an IronPython interpreter).</p>
-
-<p><span class="image-wrap" style=""><img src="images/debugger/f9.png" style="border: 1px solid black" /></span><br/>
-Another option would be running using the <b>context menu</b>, where you can choose how you want to make the run (in that way, you could run a python project with a jython interpreter)</p>
-
-<p><span class="image-wrap" style=""><img src="images/debugger/run_as_regular.png" style="border: 1px solid black" /></span></p>
-<h1><a name="PyDevLaunching-UnitTestLaunch"></a>Unit Test Launch</h1>
-
-<p>If you use <b>unit-tests</b>, and want to run only a single unit-test or a few unit-tests of a module, you can use the <b>Ctrl+F9 keybinding</b>, which will open a tree where you can choose which test(s) you want to run:</p>
-
-
-
-<p><span class="image-wrap" style=""><img src="images/debugger/ctrl_f9.png" style="border: 1px solid black" /></span><br/>
-In that dialog, there are some options:</p>
-
-
-<ul>
-	<li>Extending the filter and pressing 'Enter' will run the filtered tests</li>
-	<li>Explicitly selecting the class/tests to run will run those tests</li>
-</ul>
-
-
-
-
-
-
-<h1><a name="PyDevLaunching-DebugLaunch"></a>Debug Launch</h1>
-
-<p>To run in debug mode, you can use the <b>context menu</b>, where you can choose how you want to make the debug (note that in that way, you could debug a python project with a jython interpreter)</p>
-
-<p><span class="image-wrap" style=""><img src="images/debugger/run_as_debug.png" style="border: 1px solid black" /></span><br/>
-Another option would be running the last launch in debug mode. See: `Rerun Last Launch (regular or debug mode)`_</p>
-
-
-
-
-<h1><a name="PyDevLaunching-RerunLastLaunch%28regularordebugmode%29"></a>Rerun Last Launch (regular or debug mode)</h1>
-
-
-<p>If you use the F9 and Ctrl+F9 keybindings or launch through the context menu, usually you'll also want to check the default eclipse preferences so that <b>Ctrl+F11</b> and <b>F11</b> will run your last configuration (otherwise, they'll bring a dialog to run/debug your current editor, which is mostly what's already given by PyDev through F9 and Ctrl+F9).</p>
-
-
-
-<p>To do that, open the eclipse preferences (<b>window &gt; preferences</b>) and check <b>"Always launch previously launched application"</b>, that way, when you use <b>F11</b>, your last launch will be repeated in <b>debug mode</b> and with <b>Ctrl+F11</b>, it'll be relaunched in the <b>regular mode</b>.</p>
-
-
-<p><span class="image-wrap" style=""><img src="images/debugger/launching_dialog.png" style="border: 1px solid black" /></span><br/>
-Another option would be running the last launch from the menu. You can go to the menu with keybindings (<b>Alt+R, then 'T' regular run or 'H' for debug run</b>) and choose some existing launch to be run.</p>
-
-<p><span class="image-wrap" style=""><img src="images/debugger/run_history.png" style="border: 1px solid black" /></span></p>
-<h1><a name="PyDevLaunching-Debugging"></a>Debugging</h1>
-
-<p>Currently the debugger supports:</p>
-
-<ul>
-	<li>Step in: <b>F5</b></li>
-	<li>Step over: <b>F6</b></li>
-	<li>Step return: <b>F7</b></li>
-	<li>Continue: <b>F8</b></li>
-	<li>Breakpoints (with optional condition)</li>
-	<li>Stack view showing multiple threads</li>
-	<li>Locals and Globals variable display</li>
-	<li>Expressions display</li>
-	<li>Temporary display for selection: <b>Ctrl+Shift+D</b></li>
-	<li>Hover showing the selected expression evaluation</li>
-</ul>
-
-
-
-
-<p>To add breakpoints, you can double click the left bar or use Ctrl+F10 &gt; Add breakpoint. In a line with an existing breakpoint Ctrl+F10 will be able to remove the breakpoint, disable it and edit its properties (which can be used to provide conditions for the breakpoint to be hit). Double-clicking an existing breakpoint will remove it.</p>
-
-
-
-<p>When you hit a breakpoint, you'll get a view that allows you to inspect the stack, see locals and globals, hover over variables (or select a text to be evaluated) and add expressions.</p>
-
-<p><span class="image-wrap" style=""><img src="images/debugger/debug_perspective.png" style="border: 1px solid black" /></span><br/>
-Note that the program output is displayed in the console, and the errors in the console are hyperlinked back to the file:</p>
-
-<p><span class="image-wrap" style=""><img src="images/debugger/hyperlink.png" style="border: 1px solid black" /></span></p>
+<div class="section" id="mypy-can-be-used-with-pydev">
+<h1><a class="reference external" href="https://github.com/python/mypy">MyPy</a> can be used with PyDev</h1>
+<p>Note that <a class="reference external" href="https://github.com/python/mypy/">type checking with MyPy</a> is <strong>disabled
+by default</strong>.</p>
+<p>To activate it, go to the MyPy preferences page, and then check <strong>Use MyPy</strong>.</p>
+<blockquote>
+<div class="figure align-center">
+<img alt="images/mypy/_prefs.png" src="images/mypy/_prefs.png" />
+</div>
+</blockquote>
+<p>The integration is done so that when the PyDev code analysis is passed on a saved file, MyPy will also
+be run on that file (so, the PyDev code analysis must also be turned on for the MyPy analysis to be done).</p>
+</div>
+<div class="section" id="what-s-the-differences-from-the-pydev-code-analysis-to-mypy">
+<h1>What's the differences from the PyDev code analysis to MyPy?</h1>
+<p>The main difference is that PyDev doesn't really do type checking while MyPy does.</p>
+<p>In practice, this means that MyPy catches a whole range of errors that PyDev doesn't
+(but it's also considerably slower to run).</p>
+<p>Also, MyPy will only run in files that are saved in the disk (so, the PyDev code
+analysis can work on the editor contents while MyPy can't).</p>
+</div>
+<div class="section" id="files-analyzed">
+<h1>Files analyzed</h1>
+<p>Note that the MyPy code analysis will only be run in the currently opened editor
+(right after opening it or when the file is saved) and only if the file is
+actually in the PYTHONPATH (i.e.: it needs to be under a source folder, have a valid
+Python name and have __init__.py files in each package to access it).</p>
+</div>
+<div class="section" id="forcing-analysis-without-open-editor">
+<h1>Forcing analysis without open editor</h1>
+<p>It's possible to force running code analysis on files which are not opened in an editor
+by right-clicking a folder and choosing the menu <strong>PyDev &gt; Code Analysis</strong>.</p>
+<blockquote>
+<div class="figure align-center">
+<img alt="images/pylint/ask_code_analysis.png" src="images/pylint/ask_code_analysis.png" />
+</div>
+</blockquote>
+<p>The problems flagged by MyPy can then be seen at the Problems view (it can be accessed
+by using <strong>Ctrl+3</strong> and then typing <strong>Problems</strong>).</p>
+</div>
+<div class="section" id="forcing-file-to-be-reanalyzed-in-open-editor">
+<h1>Forcing file to be reanalyzed in open editor</h1>
+<p>Usually, when the editor is opened, the analysis will run automatically, and whenever the
+file is saved, it'll be rerun, but it's also possible to force running the analysis by
+using:</p>
+<p><strong>Ctrl+2, C</strong></p>
+<p>That'll force the code to be re-analyzed (which may be useful if you're tweaking your
+settings on MyPy). Note that MyPy will always work on the file on the disk (so,
+if your file is changed in the editor, the results from MyPy may not match what
+you're seeing in the editor).</p>
+</div>
+<div class="section" id="ignoring-a-mypy-message">
+<h1>Ignoring a MyPy message</h1>
+<p>PyDev allows users to ignore a given MyPy message in a given line by adding a <strong>#noqa</strong> comment.</p>
+</div>
+<div class="section" id="troubleshooting">
+<h1>Troubleshooting</h1>
+<p>If the option to run MyPy is enabled and results are not being shown, the first step is taking
+a look into the Error Log (it can be accessed by using <strong>Ctrl+3</strong> and then typing <strong>Error Log</strong>).</p>
+<p>If the error log shows an entry such as <strong>Unable to find mypy</strong>, it means that MyPy is not being found
+in the related Python interpreter. To fix this issue either install MyPy in the related interpreter
+or specify the <strong>MyPy</strong> executable to be used.</p>
+<p>If there is no error in the Error Log, please check the option <strong>Redirect MyPy output to console?</strong> in
+the MyPy preferences. This should create a new console view which will be shown when MyPy making
+its output visible to be able to diagnose what may be happening.</p>
+<p>If you still can't get it to work, please ask on <a class="reference external" href="https://stackoverflow.com/search?q=pydev">StackOverflow</a>
+(with a <cite>PyDev</cite> tag).</p>
 </div>
 
 			<br/><br/>
@@ -281,9 +264,9 @@ Note that the program output is displayed in the console, and the errors in the 
 			<br/><br/>
 
 			<table width="100%" bgcolor="#c0c0c0"><tbody><tr align="center">
-			<td      align="left"  width="50%"><a href="manual_adv_editor_prefs.html">Previous (Editor preferences)</a>
+			<td      align="left"  width="50%"><a href="manual_adv_pylint.html">Previous (PyLint)</a>
 			</td><td align="left"  width="30%"><a href="manual_adv_features.html">Root</a>
-			</td><td align="right" width="20%"><a href="manual_adv_markoccurrences.html">Next (Mark Occurrences)</a>
+			</td><td align="right" width="20%"><a href="manual_adv_quick_outline.html">Next (Quick Outline)</a>
 			</td>
 			</tr></tbody></table>
 		</td>
