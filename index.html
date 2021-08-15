@@ -20,8 +20,8 @@
 	<tr align="center" bgcolor="#eeeeee" valign="top">
 		<td nowrap="nowrap" class="td_top">
 		<center>
-		<p class="header_text">Last Site Update: August 13th, 2021 |
-		Latest Version: 8.3.0</p>
+		<p class="header_text">Last Site Update: August 15th, 2021 |
+		Latest Version: 9.0.0</p>
 		</center>
 		</td>
 	</tr>
@@ -990,6 +990,72 @@ shuffleEntries("gold-sponsors-a-hrefs");
 <h1>Supporting PyDev</h1>
 <p>Thank you to all PyDev supporters: <a class="reference external" href="https://www.brainwy.com/supporters/PyDev">https://www.brainwy.com/supporters/PyDev</a>.</p>
 <p>To show your appreciation for PyDev and to keep it going strong, help to crowdfund it through <a class="reference external" href="https://www.patreon.com/fabioz">https://www.patreon.com/fabioz</a>.</p>
+</div>
+<div class="section" id="release-9-0-0-2021-08-15">
+<h1>Release 9.0.0 (2021-08-15)</h1>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt><strong>Python 3.10</strong></dt>
+<dd><ul class="first last">
+<li>Support for pattern matching.</li>
+<li>Support for (multiple) parenthesized context managers.</li>
+<li>Debugging.</li>
+<li>Note: Python 3.10 support is still a work in progress, and is provided as an early release.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>Java 16</strong></dt>
+<dd><ul class="first last">
+<li>Java 16 can now be used to run PyDev</li>
+<li>When using Java 16, this update is required as older versions don't run smoothly on it due to backward-incompatible changes.</li>
+<li>Java 11 is still the minimun required version to run PyDev (and Java 15 is the recommended version).</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>Typeshed</strong></dt>
+<dd><ul class="first last">
+<li>PyDev can now use typeshed (a collection of stubs for Python libraries) for type inference.</li>
+<li>Albeit already usable, it's still considered experimental, so, it's opt-in.</li>
+<li>To opt-in select <strong>&quot;Use Typeshed for type inference (EXPERIMENTAL)&quot;</strong> in <strong>&quot;Preferences &gt; PyDev &gt; Interpreters&quot;</strong>.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>Debugger</strong></dt>
+<dd><ul class="first last">
+<li>Preliminary support for Python 3.10.</li>
+<li>Debugger properly handles case where return value name has the same value as another variable.</li>
+<li>wxPyton event loop activation works for newer versions of wxPython.</li>
+<li>Notifies when a required stdlib module required by the debugger is shadowed by a user module.</li>
+<li>Reload deals with relative imports.</li>
+<li>Auto-attach to subprocess with a <cite>__future__ import</cite> with <cite>python -c</cite> works.</li>
+<li>Other minor issues.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>Others</strong></dt>
+<dd><ul class="first last">
+<li>Performance improvement: traversing files to compute the PYTHONPATH contents is much faster.</li>
+<li>It's now possible to use the Python installed from the Microsoft Store.</li>
+<li>Updated Lucene.</li>
+<li>Typing numbers and symbols in console properly moves cursor to edit position. (<strong>#PyDev-237</strong>)</li>
+<li>--format=default is always set for Flake8. (<strong>#PyDev-1143</strong>)</li>
+<li>Traceback is properly shown after failing test with nosetest and Python3. (<strong>#PyDev-1160</strong>)</li>
+<li>Invalid django project names are properly dealt with. (<strong>#PyDev-1162</strong>)</li>
+<li>Transform is properly disposed (resource leakage reported by Eclipse 4.20).</li>
+<li>Type inference now works with typing.cast. (<strong>#PyDev-1158</strong>)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
 </div>
 <div class="section" id="release-8-3-0-2021-04-10">
 <h1>Release 8.3.0 (2021-04-10)</h1>
