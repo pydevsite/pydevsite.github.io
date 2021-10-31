@@ -20,8 +20,8 @@
 	<tr align="center" bgcolor="#eeeeee" valign="top">
 		<td nowrap="nowrap" class="td_top">
 		<center>
-		<p class="header_text">Last Site Update: October 29th, 2021 |
-		Latest Version: 9.1.0</p>
+		<p class="header_text">Last Site Update: October 31st, 2021 |
+		Latest Version: 9.2.0</p>
 		</center>
 		</td>
 	</tr>
@@ -278,6 +278,44 @@
 
 <div class="section" id="history-for-pydev">
 <h1>History For PyDev</h1>
+<div class="section" id="release-9-2-0-2021-10-31">
+<h2>Release 9.2.0 (2021-10-31)</h2>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt><strong>Code completion</strong></dt>
+<dd><ul class="first last">
+<li>Code-completion is provided for <strong>TypedDict</strong> (when requested inside of string -- i.e.: <strong>dct['|']</strong>). (<strong>#PyDev-1167</strong>)</li>
+<li><strong>super</strong> completion on method with classmethod properly adds <strong>cls</strong> instead of <strong>self</strong>. (<strong>#PyDev-201</strong>)</li>
+<li>Assigns after class definition are added to completions. (<strong>#PyDev-326</strong>)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>Debugging</strong></dt>
+<dd><ul class="first last">
+<li>Terminate remote debugger without any process attached no longer throws an exception.</li>
+<li>PyDev debugger threads are hidden in the threading module.</li>
+<li>Line validation is made for django/jinja2 templates.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>Others</strong></dt>
+<dd><ul class="first last">
+<li>Fixed regression from 9.1.0 so that Jython works properly again (start_new not available in threading). (<strong>#PyDev-1182</strong>)</li>
+<li>Don't complain if self is not in parameters for zope.Interface. (<strong>#PyDev-646</strong>)</li>
+<li>Fix issue loading test unit run.</li>
+<li>Validation in <strong>new project wizard</strong> no longer takes too much time if a folder with lots of contents is set.</li>
+<li>Add <strong>#noqa: &lt;error_code&gt;</strong> as quickfix for <strong>flake8</strong> errors. (<strong>#PyDev-1146</strong>)</li>
+<li>flake8 error code is shown in message description. (<strong>#PyDev-1146</strong>)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
 <div class="section" id="release-9-1-0-2021-10-03">
 <h2>Release 9.1.0 (2021-10-03)</h2>
 <ul class="simple">
