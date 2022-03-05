@@ -20,8 +20,8 @@
 	<tr align="center" bgcolor="#eeeeee" valign="top">
 		<td nowrap="nowrap" class="td_top">
 		<center>
-		<p class="header_text">Last Site Update: March 1st, 2022 |
-		Latest Version: 9.2.0</p>
+		<p class="header_text">Last Site Update: March 5th, 2022 |
+		Latest Version: 9.3.0</p>
 		</center>
 		</td>
 	</tr>
@@ -1019,6 +1019,38 @@ shuffleEntries("gold-sponsors-a-hrefs");
 <p>Thank you to all PyDev supporters: <a class="reference external" href="https://www.brainwy.com/supporters/PyDev">https://www.brainwy.com/supporters/PyDev</a>.</p>
 <p>To show your appreciation for PyDev and to keep it going strong, help to crowdfund it through <a class="reference external" href="https://www.patreon.com/fabioz">https://www.patreon.com/fabioz</a>.</p>
 </div>
+<div class="section" id="release-9-3-0-2022-03-05">
+<h1>Release 9.3.0 (2022-03-05)</h1>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt><strong>Debugging</strong></dt>
+<dd><ul class="first last">
+<li>Fixed issue where the variable children wouldn't expand correctly.</li>
+<li>Fixed some case where automatic connection to subprocesses wouldn't work.</li>
+<li>Debugging with Pandas is much improved with the addition of some custom converters.</li>
+<li>Opt-in support to show paused greenlets by setting <strong>GEVENT_SHOW_PAUSED_GREENLETS=1</strong>.</li>
+<li>Support for newer versions of gevent.</li>
+<li>Information on user settings paths is cached to fix issue with slow debugging using pipenv project.</li>
+<li>A warning is shown if getting some attribute / getting its repr is slow.</li>
+<li>Interactively inspect matplotlib plots when the QtAgg backend is used.</li>
+<li>Support for PySide2.</li>
+<li>Better error messages in case Python 3.11 frozen modules are being used.</li>
+<li><strong>Note</strong>: this will be the <strong>last</strong> debugger version supporting <strong>Python 2.7</strong>.</li>
+<li>Newer releases will target only <strong>Python 3.6</strong> onwards.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>Others</strong></dt>
+<dd><ul class="first last">
+<li>Fix for case where indexing could fail to account for namespace folders.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
 <div class="section" id="release-9-2-0-2021-10-31">
 <h1>Release 9.2.0 (2021-10-31)</h1>
 <ul class="simple">
@@ -1157,90 +1189,6 @@ shuffleEntries("gold-sponsors-a-hrefs");
 <li>Invalid django project names are properly dealt with. (<strong>#PyDev-1162</strong>)</li>
 <li>Transform is properly disposed (resource leakage reported by Eclipse 4.20).</li>
 <li>Type inference now works with typing.cast. (<strong>#PyDev-1158</strong>)</li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
-</div>
-<div class="section" id="release-8-3-0-2021-04-10">
-<h1>Release 8.3.0 (2021-04-10)</h1>
-<ul class="simple">
-<li><strong>Java 11</strong> is now required to run PyDev.</li>
-<li><dl class="first docutils">
-<dt><strong>External linters</strong></dt>
-<dd><ul class="first last">
-<li>Configurations of the linters can be saved to the project or user settings (<strong>#PyDev-1139</strong>)</li>
-<li>Flake8 has a more flexible UI for configuration. (<strong>#PyDev-1144</strong>)</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt><strong>Others</strong></dt>
-<dd><ul class="first last">
-<li>Option to add comments all at a single indent (note: this is now the default). (<strong>#PyDev-1141</strong>)</li>
-<li>LRU for context-insensitive completion/quick fix. (<strong>#PyDev-1142</strong>)</li>
-<li>Fixed some code-completion cases where <strong>self</strong> was wrongly added. (<strong>#PyDev-1134</strong>)</li>
-<li>Environment variables are now supported in <strong>.pydevproject</strong> (expected format: <strong>${env_var:VAR_NAME}</strong>). (<strong>#PyDev-1137</strong>)</li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
-</div>
-<div class="section" id="release-8-2-0-2021-02-21">
-<h1>Release 8.2.0 (2021-02-21)</h1>
-<ul class="simple">
-<li><dl class="first docutils">
-<dt><strong>External linters</strong></dt>
-<dd><ul class="first last">
-<li>Flake8 can now be used with PyDev (<strong>#PyDev-1127</strong>)</li>
-<li><dl class="first docutils">
-<dt>A <strong>single PyLint/Mypy/Flake8</strong> call is done when code analysis for a <strong>folder</strong>. (<strong>#PyDev-1126</strong>)</dt>
-<dd><ul class="first last">
-<li>Note: must be manually requested by <strong>right clicking a folder</strong> and selecting <strong>PyDev &gt; Code analysis</strong>.</li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt><strong>Comments are now added by default at the current indentation</strong></dt>
-<dd><ul class="first last">
-<li>Works better with code-formatters that change comments such as Black.</li>
-<li>An option is still available to add <strong>#</strong> to the line start.</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt><strong>Code analysis</strong></dt>
-<dd><ul class="first last">
-<li>Fix for duplicated signature with <strong>&#64;overload</strong>. (patch by Vito De Tullio)</li>
-<li>Fix for undefined variable in return type annotations for classes &quot;in construction&quot; with <strong>from __future__ import annotations</strong>. (<strong>#PyDev-1125</strong>)</li>
-<li>A class recognizes internal references to itself. (<strong>#PyDev-401</strong>)</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt><strong>Improvements in interpreter configuration</strong></dt>
-<dd><ul class="first last">
-<li>Various UI improvements.</li>
-<li>It is now possible to add an interpreter from Conda. (<strong>#PyDev-1122</strong>)</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt><strong>Others</strong></dt>
-<dd><ul class="first last">
-<li>New preferences page to configure <strong>Path Mappings</strong> (for remote debugging). (<strong>#PyDev-1119</strong>)</li>
-<li><strong>XXX</strong> was added as a default <strong>TODO</strong> tag.</li>
 </ul>
 </dd>
 </dl>
