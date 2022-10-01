@@ -21,7 +21,7 @@
 		<td nowrap="nowrap" class="td_top">
 		<center>
 		<p class="header_text">Last Site Update: October 1st, 2022 |
-		Latest Version: 9.3.0</p>
+		Latest Version: 10.0.0</p>
 		</center>
 		</td>
 	</tr>
@@ -278,6 +278,67 @@
 
 <div class="section" id="history-for-pydev">
 <h1>History For PyDev</h1>
+<div class="section" id="release-10-0-0-2022-10-01">
+<h2>Release 10.0.0 (2022-10-01)</h2>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt><strong>Only Python 3.6 onwards is now supported</strong></dt>
+<dd><ul class="first last">
+<li><strong>Python 3.11 is now supported</strong></li>
+<li><strong>Python 2.7</strong> support is now <strong>dropped</strong> (please use PyDev 9.3.0 if you need Python 2.7).</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>Type inference</strong></dt>
+<dd><ul class="first last">
+<li>PyDev will now use typeshed by default.</li>
+<li>It will still fallback to builtins introspection when needed.</li>
+<li>Many improvements were done in the area which should result in better code-completion and find definition in general.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>Debugging</strong></dt>
+<dd><ul class="first last">
+<li>When evaluating slow repr a note is shown related to the environment variable which should be used to customize it.</li>
+<li>Silence warning given when debugging gevent.</li>
+<li>It's now possible to use pydevd in DAP mode directly.</li>
+<li>All the items in tuples and lists can now be seen when expanding.</li>
+<li>Chained exception frames are shown in the in stack.</li>
+<li>The cause message on chained exceptions is properly shown.</li>
+<li>ctypes arrays are properly enumerated when debugging.</li>
+<li>The debugger is cleared after fork in non-python process.</li>
+<li>Top-level async is supported when evaluating in debugger/console.</li>
+<li><dl class="first docutils">
+<dt>Step in/step over support for IPython.</dt>
+<dd><ul class="first last">
+<li><strong>&quot;PYDEVD_IPYTHON_COMPATIBLE_DEBUGGING&quot; = &quot;1&quot;</strong> needs to be set in the environment when debugging IPython.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>Properly stop at line 1 in frame eval mode.</li>
+<li>Properly consider that argv[0] may be None.</li>
+<li>Use tokenize.open to open file stream (to avoid EncodingWarnings with PYTHONWARNDEFAULTENCODING).</li>
+<li>Protect against exception in linecache.getline.</li>
+<li>Auto-attach to subprocess with .zip targets.</li>
+<li>It's now possible to resolve symlinks when sending paths to the client.</li>
+<li>Warnings when evaluating in repl are shown.</li>
+<li>Errors with conditional breakpoints are clearer.</li>
+<li>Breakpoint log messages are now printed when stepping too.</li>
+<li>frame.f_locals is no longer called multiple times when assigning locals after evaluation.</li>
+<li>If pandas has lower defaults for repr, use them.</li>
+<li>Handle case where client may send files with different casing.</li>
+<li>Fixed segfault attaching debugger to a running process.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
 <div class="section" id="release-9-3-0-2022-03-05">
 <h2>Release 9.3.0 (2022-03-05)</h2>
 <ul class="simple">
