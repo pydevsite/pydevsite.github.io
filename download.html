@@ -20,8 +20,8 @@
 	<tr align="center" bgcolor="#eeeeee" valign="top">
 		<td nowrap="nowrap" class="td_top">
 		<center>
-		<p class="header_text">Last Site Update: October 26th, 2022 |
-		Latest Version: 10.0.0</p>
+		<p class="header_text">Last Site Update: October 28th, 2022 |
+		Latest Version: 10.0.1</p>
 		</center>
 		</td>
 	</tr>
@@ -374,21 +374,18 @@ but PyDev will simply not show in the target installation. See <a class="referen
 </ul>
 <p>At least one of:</p>
 <ul class="simple">
-<li><a class="reference external" href="http://www.python.org/">Python</a> <strong>(2.7 or newer)</strong></li>
-<li><a class="reference external" href="http://www.jython.org/">Jython</a> <strong>(2.7 or newer)</strong></li>
-<li><a class="reference external" href="http://www.codeplex.com/Wiki/View.aspx?ProjectName=IronPython">IronPython</a> <strong>(2.7 or newer)</strong> - note: 2.7.6 and 2.7.7 have a <a class="reference external" href="https://github.com/IronLanguages/main/issues/1663">bug</a> which makes them unusable in PyDev.</li>
+<li><a class="reference external" href="https://www.python.org/">Python</a> <strong>(3.6 or newer)</strong></li>
+<li><a class="reference external" href="https://www.pypy.org/">PyPy</a> <strong>(3.6 or newer)</strong></li>
 </ul>
 <p>and</p>
 <ul class="simple">
 <li><a class="reference external" href="http://www.eclipse.org/">Eclipse 4.6 (Neon) onwards</a></li>
 </ul>
-<p><strong>Note</strong> if using Eclipse standalone: <a class="reference external" href="http://www.python.org/">Python</a>
-and
-<a class="reference external" href="http://www.codeplex.com/Wiki/View.aspx?ProjectName=IronPython">IronPython</a>
-require only the <a class="reference external" href="http://download.eclipse.org/eclipse/downloads/">Platform Runtime
-Binary</a> (get from <a class="reference external" href="http://download.eclipse.org/eclipse/downloads">http://download.eclipse.org/eclipse/downloads</a> - download
-around 45-50 MB), and <a class="reference external" href="http://www.jython.org/">Jython</a> also requires
-<a class="reference external" href="http://www.eclipse.org/jdt/">JDT</a>.</p>
+<p><strong>Note</strong> only the <a class="reference external" href="http://download.eclipse.org/eclipse/downloads/">Platform Runtime Binary</a> (get from <a class="reference external" href="http://download.eclipse.org/eclipse/downloads">http://download.eclipse.org/eclipse/downloads</a> - download
+around 45-50 MB) is required.</p>
+<p><strong>Note</strong> although Jython and IronPython are available in the UI, they're currently not supported because no version of
+Jython nor IronPython supports the 3.6 grammar, so, in this case, please keep using an older version of PyDev
+(see <strong>Need to use older Eclipse/Java/Python</strong> below).</p>
 </div>
 <div class="section" id="requirements-for-profiling">
 <h2>Requirements for Profiling</h2>

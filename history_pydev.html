@@ -20,8 +20,8 @@
 	<tr align="center" bgcolor="#eeeeee" valign="top">
 		<td nowrap="nowrap" class="td_top">
 		<center>
-		<p class="header_text">Last Site Update: October 26th, 2022 |
-		Latest Version: 10.0.0</p>
+		<p class="header_text">Last Site Update: October 28th, 2022 |
+		Latest Version: 10.0.1</p>
 		</center>
 		</td>
 	</tr>
@@ -278,6 +278,23 @@
 
 <div class="section" id="history-for-pydev">
 <h1>History For PyDev</h1>
+<div class="section" id="release-10-0-1-2022-10-28">
+<h2>Release 10.0.1 (2022-10-28)</h2>
+<ul class="simple">
+<li>Fixed issue parsing exception groups on Python 3.11.</li>
+<li>Fixed issue which prevented JDT (Java) files from being opened in the <strong>Project Explorer</strong>.</li>
+<li>A better error message is shown when using an unsupported Python version.</li>
+<li><dl class="first docutils">
+<dt><strong>Debugging</strong></dt>
+<dd><ul class="first last">
+<li>Updated Linux DLLs to fix <strong>PyInt_FromLong not found</strong> in Python 3.11.</li>
+<li>Consider that paths are not case sensitive on Mac OS.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
 <div class="section" id="release-10-0-0-2022-10-01">
 <h2>Release 10.0.0 (2022-10-01)</h2>
 <ul class="simple">
@@ -424,7 +441,7 @@
 <dt><strong>Code completion</strong></dt>
 <dd><ul class="first last">
 <li>Support for values returned by context manager. (<strong>#PyDev-1155</strong>)</li>
-<li>Support for Union and <cite>|</cite> for Python 3.10. (<strong>#PyDev-1175</strong>)</li>
+<li>Support for Union and <strong>|</strong> for Python 3.10. (<strong>#PyDev-1175</strong>)</li>
 <li>Support for subclassing with generic types. (<strong>#PyDev-1174</strong>)</li>
 </ul>
 </dd>
