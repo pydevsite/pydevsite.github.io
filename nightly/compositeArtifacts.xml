@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?compositeArtifactRepository version='1.0.0'?>
-<repository name='&quot;Eclipse Project Test Site&quot;'
+<repository name='&quot;PyDev&quot;'
     type='org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository' version='1.0.0'>
   <properties size='1'>
-    <property name='p2.timestamp' value='1690829694'/>
+    <property name='p2.timestamp' value='1690976213'/>
   </properties>
   <children size='1'>
     <child location='https://github.com/fabioz/Pydev/releases/download/pydev_10_2_1/'/>
