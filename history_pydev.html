@@ -20,8 +20,8 @@
 	<tr align="center" bgcolor="#eeeeee" valign="top">
 		<td nowrap="nowrap" class="td_top">
 		<center>
-		<p class="header_text">Last Site Update: September 30th, 2023 |
-		Latest Version: 10.2.1</p>
+		<p class="header_text">Last Site Update: October 8th, 2023 |
+		Latest Version: 11.0.0</p>
 		</center>
 		</td>
 	</tr>
@@ -278,6 +278,71 @@
 
 <div class="section" id="history-for-pydev">
 <h1>History For PyDev</h1>
+<div class="section" id="release-11-0-0-2023-10-08">
+<h2>Release 11.0.0 (2023-10-08)</h2>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt><strong>Preliminary</strong> support for <strong>Python 3.12</strong></dt>
+<dd><ul class="first last">
+<li>Debugger now supports Python 3.12.</li>
+<li>Important: the new <strong>f-string</strong> format is still not supported.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>Code Analysis:</strong></dt>
+<dd><ul class="first last">
+<li>Now analyzes type annotations defined as strings.</li>
+<li>Fixed case where a type annotation is defined as a string but the actual type only occurs later in the file.</li>
+<li>Fixed issue where an annotation referencing a class defined later on in the file would be reported as an error.</li>
+<li>Imports found inside a <strong>typing.TYPE_CHECKING</strong> will be considered undefined if the scope that uses it requires it to be available when not type-checking.</li>
+<li>Properly consider that a method containing <strong>...</strong> is an empty method and don't report unused arguments in it.</li>
+<li>Properly consider that attributes in enum subclasses are actually instances of the class where they're defined.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>Docstring generation:</strong></dt>
+<dd><ul class="first last">
+<li>Fixed issue where <strong>self</strong> could be added to the arguments when auto-generating docstrings (with <strong>Ctrl+1 &gt; Make Docstring</strong> in <strong>def</strong> line).</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>Type inference:</strong></dt>
+<dd><ul class="first last">
+<li>Fixed issue where <strong>Pathlib</strong> with a <strong>__div__</strong> didn't offer completions properly.</li>
+<li>Better support when using <strong>cython 3.0</strong> to generate the AST.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>ruff</strong> integration:</dt>
+<dd><ul class="first last">
+<li>Fixed issue when an empty output is given.</li>
+<li>If some error happens in the integration a better error message is given.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><strong>Isort</strong> integration: now always uses the <strong>isort</strong> found in the Python environment or an external executable.</li>
+<li><dl class="first docutils">
+<dt><strong>Others:</strong></dt>
+<dd><ul class="first last">
+<li>Performance improvement: tooltips are no longer clipped based on <strong>maxWidth</strong>. Fixes <strong>#PyDev-1233</strong>: Eclipse IDE freezes when using a variable with a very long base64 value.</li>
+<li>Pretty-printing <strong>nonlocal</strong> now works.</li>
+<li>In the outline page <strong>overload methods</strong> now have a different decoration and it's possible to hide them.</li>
+<li>Fixed syntax Error with <strong>case None</strong>. <strong>#PyDev-1232</strong></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
 <div class="section" id="release-10-2-1-2023-07-02">
 <h2>Release 10.2.1 (2023-07-02)</h2>
 <ul class="simple">
