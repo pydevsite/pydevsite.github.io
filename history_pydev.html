@@ -20,8 +20,8 @@
 	<tr align="center" bgcolor="#eeeeee" valign="top">
 		<td nowrap="nowrap" class="td_top">
 		<center>
-		<p class="header_text">Last Site Update: January 29th, 2024 |
-		Latest Version: 11.0.3</p>
+		<p class="header_text">Last Site Update: February 1st, 2024 |
+		Latest Version: 12.0.0</p>
 		</center>
 		</td>
 	</tr>
@@ -278,6 +278,47 @@
 
 <div class="section" id="history-for-pydev">
 <h1>History For PyDev</h1>
+<div class="section" id="release-12-0-0-2024-02-01">
+<h2>Release 12.0.0 (2024-02-01)</h2>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt><strong>Only Python 3.8 onwards is now supported</strong></dt>
+<dd><ul class="first last">
+<li><strong>Python 3.6</strong> and <strong>3.7</strong> support is now <strong>dropped</strong> (please use <strong>PyDev 11.0.3</strong> if you still use it).</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>Debugger</strong></dt>
+<dd><ul class="first last">
+<li><strong>sys.monitoring</strong> is now used in Python 3.12 (and it's <strong>much</strong> faster than any previous version).</li>
+<li>A new setting was added in the <strong>Preferences &gt; PyDev &gt; Debug</strong> to debug <strong>just my code</strong> (meaning that when stepping it will just step into files under PyDev source folders).</li>
+<li>Improved the step into function (activated with <strong>Ctrl+Alt</strong> then <strong>Click function</strong> to step into).</li>
+<li>Support for Python 3.6 and 3.7 was dropped (only Python 3.8 onwards is now supported).</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>Ruff</strong></dt>
+<dd><ul class="first last">
+<li>Ruff can now be used as a code formatter.</li>
+<li>The latest ruff (<strong>0.1.x</strong>) is now supported (as it broke backward compatibility in its <strong>0.1.0</strong> version).</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>Code Analysis</strong></dt>
+<dd><ul class="first last">
+<li>Fixes in semantic analysis to better determine if strings in annotations should be checked for symbols or not.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
 <div class="section" id="release-11-0-3-2023-10-30">
 <h2>Release 11.0.3 (2023-10-30)</h2>
 <ul class="simple">

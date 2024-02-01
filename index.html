@@ -20,8 +20,8 @@
 	<tr align="center" bgcolor="#eeeeee" valign="top">
 		<td nowrap="nowrap" class="td_top">
 		<center>
-		<p class="header_text">Last Site Update: January 29th, 2024 |
-		Latest Version: 11.0.3</p>
+		<p class="header_text">Last Site Update: February 1st, 2024 |
+		Latest Version: 12.0.0</p>
 		</center>
 		</td>
 	</tr>
@@ -968,6 +968,47 @@ shuffleEntries("gold-sponsors-a-hrefs", 4);
 <p>Thank you to all PyDev supporters: <a class="reference external" href="https://www.brainwy.com/supporters/PyDev">https://www.brainwy.com/supporters/PyDev</a>.</p>
 <p>To show your appreciation for PyDev and to keep it going strong, help to crowdfund it through <a class="reference external" href="https://www.patreon.com/fabioz">https://www.patreon.com/fabioz</a>.</p>
 </div>
+<div class="section" id="release-12-0-0-2024-02-01">
+<h1>Release 12.0.0 (2024-02-01)</h1>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt><strong>Only Python 3.8 onwards is now supported</strong></dt>
+<dd><ul class="first last">
+<li><strong>Python 3.6</strong> and <strong>3.7</strong> support is now <strong>dropped</strong> (please use <strong>PyDev 11.0.3</strong> if you still use it).</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>Debugger</strong></dt>
+<dd><ul class="first last">
+<li><strong>sys.monitoring</strong> is now used in Python 3.12 (and it's <strong>much</strong> faster than any previous version).</li>
+<li>A new setting was added in the <strong>Preferences &gt; PyDev &gt; Debug</strong> to debug <strong>just my code</strong> (meaning that when stepping it will just step into files under PyDev source folders).</li>
+<li>Improved the step into function (activated with <strong>Ctrl+Alt</strong> then <strong>Click function</strong> to step into).</li>
+<li>Support for Python 3.6 and 3.7 was dropped (only Python 3.8 onwards is now supported).</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>Ruff</strong></dt>
+<dd><ul class="first last">
+<li>Ruff can now be used as a code formatter.</li>
+<li>The latest ruff (<strong>0.1.x</strong>) is now supported (as it broke backward compatibility in its <strong>0.1.0</strong> version).</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>Code Analysis</strong></dt>
+<dd><ul class="first last">
+<li>Fixes in semantic analysis to better determine if strings in annotations should be checked for symbols or not.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
 <div class="section" id="release-11-0-3-2023-10-30">
 <h1>Release 11.0.3 (2023-10-30)</h1>
 <ul class="simple">
@@ -986,14 +1027,6 @@ shuffleEntries("gold-sponsors-a-hrefs", 4);
 </dd>
 </dl>
 </li>
-</ul>
-</div>
-<div class="section" id="release-11-0-1-2023-10-22">
-<h1>Release 11.0.1 (2023-10-22)</h1>
-<ul class="simple">
-<li><strong>Java 17</strong> is now the minimum java version supported (same as Eclipse 2022-09 onwards).</li>
-<li>A few bugfixes (related to Python 3.12 support).</li>
-<li>Release is now done with a new code signing certificate.</li>
 </ul>
 </div>
 <div class="section" id="release-11-0-0-2023-10-08">
@@ -1055,217 +1088,6 @@ shuffleEntries("gold-sponsors-a-hrefs", 4);
 <li>Pretty-printing <strong>nonlocal</strong> now works.</li>
 <li>In the outline page <strong>overload methods</strong> now have a different decoration and it's possible to hide them.</li>
 <li>Fixed syntax Error with <strong>case None</strong>. <strong>#PyDev-1232</strong></li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
-</div>
-<div class="section" id="release-10-2-1-2023-07-02">
-<h1>Release 10.2.1 (2023-07-02)</h1>
-<ul class="simple">
-<li><dl class="first docutils">
-<dt>Fixed compatibility with Eclipse 4.28 (2023-06) as it broke backward compatibility.</dt>
-<dd>i.e.: Fix for &quot;<strong>java.lang.NoClassDefFoundError: org/eclipse/ui/views/navigator/NavigatorDragAdapter</strong>&quot;</dd>
-</dl>
-</li>
-</ul>
-</div>
-<div class="section" id="release-10-2-0-2023-06-25">
-<h1>Release 10.2.0 (2023-06-25)</h1>
-<ul class="simple">
-<li><strong>Ruff</strong> is now supported. (<strong>#PyDev-1225</strong>)</li>
-<li>Forward declaration in the format: <strong>Optional['ClassName']</strong> is now supported in the inference engine. (<strong>#PyDev-1217</strong>)</li>
-<li>Fixed issue parsing match statement. (<strong>#PyDev-1222</strong>)</li>
-<li>Properly recognize <cite>**rest</cite> variable when unpacking in match. (<strong>#PyDev-1218</strong>)</li>
-<li>Fixed case where <strong>match</strong> was not recognized as a variable name. (<strong>#PyDev-1210</strong>)</li>
-<li><strong>Black</strong> formatting discrepancies with <strong>.pyi</strong> files. (<strong>#PyDev-1224</strong>)</li>
-<li>If a TODO message is too big, it is now clipped.</li>
-</ul>
-</div>
-<div class="section" id="release-10-1-4-2023-04-15">
-<h1>Release 10.1.4 (2023-04-15)</h1>
-<ul class="simple">
-<li>Improvements to make the debugger work in Python 3.12 (note: still a work in progress).</li>
-<li>The conda activate location is now found on Mac OS.</li>
-<li><dl class="first docutils">
-<dt>Changes so that PyDev doesn't change itself while running to abide to Mac OS rule that programs should not change after installed.</dt>
-<dd><ul class="first last">
-<li>i.e.: don't write $py.class files and save jython cache dir in user directory.</li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
-</div>
-<div class="section" id="release-10-1-3-2023-01-23">
-<h1>Release 10.1.3 (2023-01-23)</h1>
-<ul class="simple">
-<li><strong>Critical bugfix</strong>: MyPy integration: MYPYPATH did not contain source folders when requested.</li>
-</ul>
-</div>
-<div class="section" id="release-10-1-2-2023-01-21">
-<h1>Release 10.1.2 (2023-01-21)</h1>
-<ul class="simple">
-<li><strong>PyLint</strong>, <strong>Mypy</strong> and <strong>Flake8</strong> are now executed with <strong>python -m</strong> when option to search in interpreter is used.</li>
-<li>Fixed Stack Overflow when <strong>typing.cast()</strong> was used with a class that could not be resolved.</li>
-<li>Fixed issue where values for <strong>typing.cast()</strong> could be gotten from the wrong scope.</li>
-<li>Properly synchronize threads when computing <cite>typesched</cite> information.</li>
-</ul>
-</div>
-<div class="section" id="release-10-1-1-2023-01-09">
-<h1>Release 10.1.1 (2023-01-09)</h1>
-<ul class="simple">
-<li><strong>Critical bugfix</strong>: Analysis preferences are now properly initialized again.</li>
-</ul>
-</div>
-<div class="section" id="release-10-1-0-2023-01-07">
-<h1>Release 10.1.0 (2023-01-07)</h1>
-<ul class="simple">
-<li><dl class="first docutils">
-<dt>All analysis settings are now loaded and saved from the <strong>org.python.pydev</strong> scope.</dt>
-<dd><ul class="first last">
-<li>Contents from <strong>.settings/org.python.pydev.analysis.yaml</strong> must now be moved to the <strong>.settings/org.python.pydev.yaml</strong> file.</li>
-<li>Fixes issue where the configurations from PyLint weren't being picked up.</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt><strong>pydevd updated to 2.9.5</strong></dt>
-<dd><ul class="first last">
-<li>Handle OSError when listing to get path with real case</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li>More information is shown if formatting with <strong>black</strong> fails.</li>
-<li>If conda lists the same env more than once, show it only once.</li>
-<li>When configuring interpreter, detect if it's a conda env and mark to activate by default.</li>
-</ul>
-</div>
-<div class="section" id="release-10-0-2-2022-12-10">
-<h1>Release 10.0.2 (2022-12-10)</h1>
-<ul class="simple">
-<li>Fixed KeyAssistDialog (activated on Ctrl+2) which was using deprecated construct no longer available in 4.26 (2022-12).</li>
-<li><dl class="first docutils">
-<dt><strong>pydevd updated to 2.9.3</strong></dt>
-<dd><ul class="first last">
-<li>Properly allow setting locals to None when evaluating.</li>
-<li>Allow using globals() when evaluating.</li>
-<li>If gevent tries to disable the tracing prevent it.</li>
-<li>On Python 3.11 _fork_exec is now properly monkey-patched for subprocesses.</li>
-<li>Strings inside containers are no longer shown as special variables.</li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
-</div>
-<div class="section" id="release-10-0-1-2022-10-28">
-<h1>Release 10.0.1 (2022-10-28)</h1>
-<ul class="simple">
-<li>Fixed issue parsing exception groups on Python 3.11.</li>
-<li>Fixed issue which prevented JDT (Java) files from being opened in the <strong>Project Explorer</strong>.</li>
-<li>A better error message is shown when using an unsupported Python version.</li>
-<li><dl class="first docutils">
-<dt><strong>Debugging</strong></dt>
-<dd><ul class="first last">
-<li>Updated Linux DLLs to fix <strong>PyInt_FromLong not found</strong> in Python 3.11.</li>
-<li>Consider that paths are not case sensitive on Mac OS.</li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
-</div>
-<div class="section" id="release-10-0-0-2022-10-01">
-<h1>Release 10.0.0 (2022-10-01)</h1>
-<ul class="simple">
-<li><dl class="first docutils">
-<dt><strong>Only Python 3.6 onwards is now supported</strong></dt>
-<dd><ul class="first last">
-<li><strong>Python 3.11 is now supported</strong></li>
-<li><strong>Python 2.7</strong> support is now <strong>dropped</strong> (please use PyDev 9.3.0 if you need Python 2.7).</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt><strong>Type inference</strong></dt>
-<dd><ul class="first last">
-<li>PyDev will now use typeshed by default.</li>
-<li>It will still fallback to builtins introspection when needed.</li>
-<li>Many improvements were done in the area which should result in better code-completion and find definition in general.</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt><strong>Debugging</strong></dt>
-<dd><ul class="first last">
-<li>When evaluating slow repr a note is shown related to the environment variable which should be used to customize it.</li>
-<li>Silence warning given when debugging gevent.</li>
-<li>It's now possible to use pydevd in DAP mode directly.</li>
-<li>All the items in tuples and lists can now be seen when expanding.</li>
-<li>Chained exception frames are shown in the in stack.</li>
-<li>The cause message on chained exceptions is properly shown.</li>
-<li>ctypes arrays are properly enumerated when debugging.</li>
-<li>The debugger is cleared after fork in non-python process.</li>
-<li>Top-level async is supported when evaluating in debugger/console.</li>
-<li><dl class="first docutils">
-<dt>Step in/step over support for IPython.</dt>
-<dd><ul class="first last">
-<li><strong>&quot;PYDEVD_IPYTHON_COMPATIBLE_DEBUGGING&quot; = &quot;1&quot;</strong> needs to be set in the environment when debugging IPython.</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li>Properly stop at line 1 in frame eval mode.</li>
-<li>Properly consider that argv[0] may be None.</li>
-<li>Use tokenize.open to open file stream (to avoid EncodingWarnings with PYTHONWARNDEFAULTENCODING).</li>
-<li>Protect against exception in linecache.getline.</li>
-<li>Auto-attach to subprocess with .zip targets.</li>
-<li>It's now possible to resolve symlinks when sending paths to the client.</li>
-<li>Warnings when evaluating in repl are shown.</li>
-<li>Errors with conditional breakpoints are clearer.</li>
-<li>Breakpoint log messages are now printed when stepping too.</li>
-<li>frame.f_locals is no longer called multiple times when assigning locals after evaluation.</li>
-<li>If pandas has lower defaults for repr, use them.</li>
-<li>Handle case where client may send files with different casing.</li>
-<li>Fixed segfault attaching debugger to a running process.</li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
-</div>
-<div class="section" id="release-9-3-0-2022-03-05">
-<h1>Release 9.3.0 (2022-03-05)</h1>
-<ul class="simple">
-<li><dl class="first docutils">
-<dt><strong>Debugging</strong></dt>
-<dd><ul class="first last">
-<li>Fixed issue where the variable children wouldn't expand correctly.</li>
-<li>Fixed some case where automatic connection to subprocesses wouldn't work.</li>
-<li>Debugging with Pandas is much improved with the addition of some custom converters.</li>
-<li>Opt-in support to show paused greenlets by setting <strong>GEVENT_SHOW_PAUSED_GREENLETS=1</strong>.</li>
-<li>Support for newer versions of gevent.</li>
-<li>Information on user settings paths is cached to fix issue with slow debugging using pipenv project.</li>
-<li>A warning is shown if getting some attribute / getting its repr is slow.</li>
-<li>Interactively inspect matplotlib plots when the QtAgg backend is used.</li>
-<li>Support for PySide2.</li>
-<li>Better error messages in case Python 3.11 frozen modules are being used.</li>
-<li><strong>Note</strong>: this will be the <strong>last</strong> debugger version supporting <strong>Python 2.7</strong>.</li>
-<li>Newer releases will target only <strong>Python 3.6</strong> onwards.</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt><strong>Others</strong></dt>
-<dd><ul class="first last">
-<li>Fix for case where indexing could fail to account for namespace folders.</li>
 </ul>
 </dd>
 </dl>
