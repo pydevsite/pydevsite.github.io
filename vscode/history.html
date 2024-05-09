@@ -20,7 +20,7 @@
 	<tr align="center" bgcolor="#eeeeee" valign="top">
 		<td nowrap="nowrap" class="td_top">
 		<center>
-		<p class="header_text">Last Site Update: April 22nd, 2024 |
+		<p class="header_text">Last Site Update: May 9th, 2024 |
 		Latest Version: 12.0.0</p>
 		</center>
 		</td>
@@ -276,8 +276,14 @@
 			
 <h1 class="title">History For PyDev on VSCode</h1>
 
-<div class="section" id="unreleased">
-<h1>Unreleased</h1>
+<div class="section" id="release-0-5-1-2024-05-06">
+<h1>Release 0.5.1 (2024-05-06)</h1>
+<ul class="simple">
+<li>Fixed issue where <cite>code action</cite> to fix undefined import didn't work properly.</li>
+</ul>
+</div>
+<div class="section" id="release-0-5-0-2024-05-05">
+<h1>Release 0.5.0 (2024-05-05)</h1>
 <ul class="simple">
 <li>Created command: <strong>PyDev: Config: Select Python Interpreter</strong></li>
 <li>Better UI to show different generated logs.</li>
@@ -286,6 +292,98 @@
 <li>Updated to PyDev 12.0.0.</li>
 <li>Updated to Eclipse 4.30.</li>
 <li>Updated to lsp4j 0.21.2.</li>
+<li>Added templates to code-completion</li>
+<li><dl class="first docutils">
+<dt>Supports using as the formatter:</dt>
+<dd><ul class="first last">
+<li><strong>Black</strong></li>
+<li><strong>Ruff</strong></li>
+<li><strong>autopep8</strong></li>
+<li>See related <strong>python.pydev.formatter</strong> setting</li>
+<li>Example: after installing <strong>Ruff</strong> in the python environment enable <strong>Ruff</strong> to be the formatter used by setting <strong>python.pydev.formatter</strong> to <strong>ruff</strong></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Supports using for linting (when a file is saved):</dt>
+<dd><ul class="first last">
+<li><strong>MyPy</strong></li>
+<li><strong>Ruff</strong></li>
+<li><strong>PyLint</strong></li>
+<li><dl class="first docutils">
+<dt><strong>Flake8</strong></dt>
+<dd><ul class="first last">
+<li>See related <strong>python.pydev.lint</strong> settings</li>
+<li>Example: after installing <strong>MyPy</strong> in the python environment, enable <strong>MyPy</strong> code analysis through the <strong>python.pydev.lint.mypy.use</strong> setting</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Running / Debugging (with the required <strong>Python Debugger (PyDev)</strong> extension)</dt>
+<dd><ul class="first last">
+<li>Run a python program (<strong>path/to/script.py</strong>) (set <strong>program</strong> in the launch configuration)</li>
+<li>Run a python module (<strong>python -m &lt;module&gt;</strong>) (set <strong>module</strong> in the launch configuration)</li>
+<li><dl class="first docutils">
+<dt>Attach to a python program waiting for a connection</dt>
+<dd><ul class="first last">
+<li>The python program must call <strong>import pydevd;pydevd.settrace(host=&quot;&quot;, port=port, protocol=&quot;dap&quot;)</strong></li>
+<li>An attach launch configuration with an <strong>attach</strong> mode must be run</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Start a server which waits for incoming connections</dt>
+<dd><ul class="first last">
+<li>An attach launch configuration with a <strong>server</strong> mode must be run</li>
+<li>The python program must call <strong>import pydevd;pydevd.settrace(host=&quot;127.0.0.1&quot;, port=port, protocol=&quot;dap&quot;)</strong></li>
+<li>In Python 3.12 uses new APIs for very low overhead debugging.</li>
+<li>In other Python versions it can also leverage the python <strong>frame eval</strong> for fast debugging (although it falls back to tracing once a breakpoint is hit).</li>
+<li><dl class="first docutils">
+<dt>Supports many features such as:</dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt>Line breakpoints</dt>
+<dd><ul class="first last">
+<li>Expression</li>
+<li>Hit Count</li>
+<li>Log message</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>Exception breakpoints</li>
+<li>Step in</li>
+<li>Step into target</li>
+<li>Jump to line (Set next line execution)</li>
+<li>Step over</li>
+<li>Step Return</li>
+<li>Change variable</li>
+<li>Debug Console evaluation</li>
+<li>View variables</li>
+<li>Customize variables</li>
+<li>Auto attach to subprocesses</li>
+<li>Start attach in server mode</li>
+<li>Attach to waiting program</li>
+<li>Launch in run or debug mode</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
 </ul>
 </div>
 <div class="section" id="release-0-4-0-2023-05-07">
