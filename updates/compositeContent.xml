@@ -3,7 +3,7 @@
 <repository name='&quot;PyDev&quot;'
     type='org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository' version='1.0.0'>
   <properties size='1'>
-    <property name='p2.timestamp' value='1716900359'/>
+    <property name='p2.timestamp' value='1716900379'/>
   </properties>
  <children size='1'>
     <child location='https://github.com/fabioz/Pydev/releases/download/pydev_12_1_0/'/>
