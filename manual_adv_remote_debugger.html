@@ -19,7 +19,7 @@
 	<tr align="center" bgcolor="#eeeeee" valign="top">
 		<td nowrap="nowrap" class="td_top">
 		<center>
-		<p class="header_text">Last Site Update: September 21st, 2024 |
+		<p class="header_text">Last Site Update: September 23rd, 2024 |
 		Latest Version: 12.2.0</p>
 		</center>
 		</td>
@@ -201,16 +201,17 @@
     	<li><strong>Note:</strong> if the program is being edited inside of PyDev (and launched externally), you can write only <b>pydevd</b> and request
     	a code-completion which will add pydevd.py to sys.path and do the settrace (i.e.: steps 3 and 4).</li>
 	</ul>
+	<li>5. Adjust Path Mappings</li>
 </ul>
 
 
 <p>Let's see a simple step-by-step example on how this works:</p>
 
-<p><b>1. Start the remote debugger server</b>: To start the remote debugger server, 
+<p><b>1. Start the remote debugger server</b>: To start the remote debugger server,
 go to the menu: <b>PyDev &gt; Start Debug Server</b>. When running, a Debug Server
 entry should appear in the Debug Stack view.</p>
 
-<p><b>Note</b>: That menu item should be present at the debug perspective and it can be 
+<p><b>Note</b>: That menu item should be present at the debug perspective and it can be
 enabled in other perspectives through Window &gt; Perspective &gt; Customize perspective &gt; Tool Bar Visibility &gt; PyDev debug.</p>
 
 
@@ -221,38 +222,73 @@ enabled in other perspectives through Window &gt; Perspective &gt; Customize per
 
 
 
-<p><b>2. Go to the debug perspective</b>: This is needed because it has no actual 'signal' that it 
+<p><b>2. Go to the debug perspective</b>: This is needed because it has no actual 'signal' that it
 reached a breakpoint when doing remote debugging. So, if you already have it open, just cycle to it
  with <b>Ctrl+F8</b>. Otherwise, go to the menu: window &gt; Open Perspective &gt; Other &gt; Debug.</p>
 
-<p><b>3. Call pydevd.settrace()</b>. If the program is being edited inside of PyDev 
-(and launched externally), you can write only <b>pydevd</b> and request a code-completion 
+<p><b>3. Call pydevd.settrace()</b>. If the program is being edited inside of PyDev
+(and launched externally), you can write only <b>pydevd</b> and request a code-completion
 which will add pydevd.py to sys.path and do the pydevd.settrace().</p>
 
-<p>Now, if you're launching from a different computer, you should copy the contents of PyDev.Debugger to the
-target computer. If you're in the latest version, it  may be installed with <strong>pip install pydevd</strong>. Otherwise,
-you have to copy the <b>pysrc</b> contents of <b>org.python.pydev</b> plugin from your Eclipse installation. 
+<p><strong>Note</strong> if you're launching from a different computer, you have to get the PyDev.Debugger in the
+target computer. If you're in the latest version, it  may be installed with <strong>pip install pydevd</strong>.
+That usually works as <strong>pydevd</strong> is usually backward compatible, but if for some reason it doesn't work
+because your PyDev version is too old, you may have to check the version of <b>pysrc/pydevd.py</b> in the contents of <b>org.python.pydev.core</b>
+plugin from your Eclipse installation to install the proper version of the debugger (or just copy the full contents of that
+directory to the target machine and add it to the PYTHOHNPATH).
 </p>
 
-<p><strong>Note</strong>: if the target machine does not have the same paths as the client machine, the file <b>pydevd_file_utils.py</b> 
-must be edited to properly translate the paths from one machine to the other - see comments on that file.</p>
-
-<p><b>4. Launch the program and wait for it to reach the pydevd.settrace() call</b>: 
+<p><b>4. Launch the program and wait for it to reach the pydevd.settrace() call</b>:
 When that call is reached, it will automatically suspend the execution and show the debugger.</p>
 
 <p><span class="image-wrap" style=""><img src="images/debugger/remotedebugger3.png" style="border: 1px solid black" /></span></p>
 
 <p><b>Image:</b> pydevd.settrace called</p>
 
+
+<h1><a name="PyDevRemoteDebugger-PathMapping"></a>5. Path Mappings</h1>
+
+<p>You can have the running program in one machine and PyDev on another machine, but if the paths are not exactly the
+same the <strong>Path Mappings</strong> must be set in the <strong>Preferences</strong>, in <strong>PyDev > Debug > Path Mappings</strong></p>
+
+<p>
+Hint: it's possible to click the <strong>Add path mapping template entry</strong> button to pre-fill with a template and it may be useful to check the <strong>Debug path translation</strong>
+while you're trying to ge the path mappings correct.</p>
+
+<p>Keep in mind that the <strong>localRoot</strong> is the path from the machine where Eclipse/PyDev is running, whereas
+the <strong>remoteRoot</strong> is the one where the python process is running.</p>
+
+<p><span class="image-wrap" style=""><img src="images/debugger/pathmapping.png" style="border: 1px solid black" /></span></p>
+
+<p><b>Image:</b> path mapping configuration</p>
+
 <h1><a name="PyDevRemoteDebugger-ImportantNotes"></a>Important Notes</h1>
 
-<p><b>NOTE 1</b>: the settrace() function can have an optional parameter to specify the host where the remote debugger is listening. E.g.: <b>pydevd.settrace('10.0.0.1')</b></p>
+<p><b>NOTE 1</b>: the settrace() function can have an optional parameter to specify the host where the remote debugger is listening. E.g.: <b>pydevd.settrace(host='10.0.0.1')</b></p>
 
-<p><b>NOTE 2</b>: the settrace() function can have optional parameters to specify that all the messages printed to stdout or stderr should be passed to the server to show. E.g.: <b>pydevd.settrace(stdoutToServer=True, stderrToServer=True)</b></p>
+<p><b>NOTE 2</b>: the settrace() function can have optional parameters to specify that all the messages printed to stdout or stderr should be passed to the server to show. E.g.: <b>pydevd.settrace(stdout_to_server=True, stderr_to_server=True)</b></p>
 
-<p><b>NOTE 3</b>: You can have the running program in one machine and PyDev on another machine, but if the paths are not exactly the same, some adjustments have to be done in the target machine:</p>
+<p> See below for the arguments that may be customizable in `settrace`:
+<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee; font-size: 12px; border: 1px dashed #999999; line-height: 14px; padding: 5px; overflow: auto; width: 100%">
+  <code style="color:#000000;word-wrap:normal;">
+:param host: host to connect to, if the client is not in the same machine (default is the localhost)
 
-<p>Aside from passing the files in eclipse/plugins/org.python.pydev&#95;x.x.x/pysrc to your target machine, the file <b>pydevd&#95;file&#95;utils.py</b> must be edited to make the path translations from the client machine to the server machine and vice-versa. See the comments on that file for detailed instructions on setting the path translations.</p>
+:param stdout_to_server: when this is true, the stdout is passed to the debug server
+
+:param stderr_to_server: when this is true, the stderr is passed to the debug server
+    so that they are printed in its console and not in this process console.
+
+:param port: specifies which port to use for communicating with the server (note that the server must be started
+    in the same port). @note: by default it's 5678 in PyDev, but it may be customized in the debug preferences.
+
+:param suspend: whether a breakpoint should be emulated as soon as this function is called.
+
+:param trace_only_current_thread: determines if only the current thread will be traced or all current and future
+    threads will also have the tracing enabled.
+</code></pre>
+</p>
+
+
 </div>
 
 			<br/><br/>
