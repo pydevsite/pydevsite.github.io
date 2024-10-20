@@ -9,6 +9,10 @@ body {
 	color: #303030;
 }
 
+code {
+	background-color: #ededef
+}
+
 #right_area {
 	display: none;
 }

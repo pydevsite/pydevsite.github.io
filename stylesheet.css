@@ -80,6 +80,10 @@ img.link {
 	font-weight:bold;
 }
 
+code {
+	background-color: #dbdbef
+}
+
 .image-wrap > img{
 	margin-top: 20px;
 	margin-bottom: 20px;
