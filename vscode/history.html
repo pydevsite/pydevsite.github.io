@@ -20,7 +20,7 @@
 	<tr align="center" bgcolor="#eeeeee" valign="top">
 		<td nowrap="nowrap" class="td_top">
 		<center>
-		<p class="header_text">Last Site Update: January 3rd, 2025 |
+		<p class="header_text">Last Site Update: January 19th, 2025 |
 		Latest Version: 12.2.0</p>
 		</center>
 		</td>
@@ -275,11 +275,37 @@
 		<td class="td_right2" align="left" colspan="2">
 			<h2>History For PyDev on VSCode</h2>
 
+<h3>Release 0.14.0</h3>
+
+<p>Release focus on multi-project support!</p>
+
+<p>Details:</p>
+
+<ul>
+<li>Added command <code>PyDev: Clear caches</code> to clear internal caches and restart the Language Server
+<ul>
+<li>This can be used as an escape hatch when the Language Server is returning outdated information or if the project structure has changed.</li>
+</ul></li>
+<li>Multiple projects and interpreters in the workspace are now detected and used by PyDev by using the information in a <code>pyproject.toml</code>, <code>venv</code>, <code>conda</code> or <code>Sema4ai VSCode Extension</code> (which automatically creates an interpreter based on <code>package.yaml</code>/<code>robot.yaml</code> files) -- please report if you need support for other tools or if the existing heuristics don't work for your project structure.
+<ul>
+<li>Searching for multiple projects is enabled by default but can be disabled by setting <code>python.pydev.autoDetectProjects</code> to <code>false</code> (when disabled, just a single project is used for the whole workspace using the <code>python.pydev.pythonInterpreter</code> and <code>python.pydev.pythonPath</code> settings).</li>
+<li>See: https://www.pydev.org/vscode/multiple<em>projects</em>handling.html for more details.</li>
+</ul></li>
+<li>When opening a definition, PyDev will now prefer to open the actual source file instead of a file just with the definitions in <code>typeshed</code> (although if it cannot be found, <code>typeshed</code> will still be used).</li>
+<li>Using <code>ruff check</code> instead of <code>ruff</code> in ruff integration (command line breakage from ruff).</li>
+</ul>
+
 <h3>Release 0.13.0</h3>
 
 <ul>
-<li><h3>Release 0.12.0</h3></li>
-<li><p>Preliminary support for Python 3.13 (note: the debugger still doesn't support it, but it'll follow soon).</p></li>
+<li>Using <code>runfiles.py</code> from <code>Python Debugger (PyDev)</code> extension (when available) to run tests.</li>
+<li>Along with the updated <code>Python Debugger (PyDev)</code> version <code>0.0.5</code> provides support for debugging <code>Python 3.13</code>.</li>
+</ul>
+
+<h3>Release 0.12.0</h3>
+
+<ul>
+<li>Preliminary support for Python 3.13 (note: the debugger still doesn't support it, but it'll follow soon).</li>
 <li>Fix in assist docstring: properly updates docstring even if the signature spans multiple lines.</li>
 <li>Support for <code>Annotated[cls]</code> in type inference engine.</li>
 <li>Support for type alias declaration (Python 3.12 syntax fix). i.e.: the following syntax is supported: <code>type Point[T] = tuple[T, T]</code>.</li>
@@ -618,7 +644,7 @@ Please make sure to use 0.2.4 where those issues were solved.</p>
 	<tr align="center" bgcolor="#eeeeee" valign="middle">
 		<td colspan="10" nowrap="nowrap" class="td_bottom">
 		<center>
-		<p class="header_text">Copyright: Brainwy Software Ltda, 2014-2021</p>
+		<p class="header_text">Copyright: Brainwy Software Ltda, 2014-2025</p>
 		</center>
 		</td>
 	</tr>

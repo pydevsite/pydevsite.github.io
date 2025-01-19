@@ -20,7 +20,7 @@
 	<tr align="center" bgcolor="#eeeeee" valign="top">
 		<td nowrap="nowrap" class="td_top">
 		<center>
-		<p class="header_text">Last Site Update: January 3rd, 2025 |
+		<p class="header_text">Last Site Update: January 19th, 2025 |
 		Latest Version: 12.2.0</p>
 		</center>
 		</td>
@@ -273,48 +273,61 @@
 
 
 		<td class="td_right2" align="left" colspan="2">
-			
-<h1 class="title">Settings</h1>
+			<h1>PyDev for VSCode Manual</h1>
 
-<div class="section" id="python-pydev-java-home">
-<h1>python.pydev.java.home</h1>
-<p>If the extension can't find the java executable, this setting can be used to specify the java home folder (which has <strong>/bin/java</strong> inside it).</p>
-<p><strong>Note</strong>: requires restarting vscode</p>
-</div>
-<div class="section" id="python-pydev-ls-vmargs">
-<h1>python.pydev.ls.vmargs</h1>
-<p>vmargs to the java executable used to launch PyDev.</p>
-<p><strong>Note</strong>: requires restarting vscode</p>
-</div>
-<div class="section" id="python-pydev-pythonexecutable">
-<h1>python.pydev.pythonExecutable</h1>
-<p>The python executable to be used (if not specified, <strong>python</strong> is expected to be in the <strong>PATH</strong>).</p>
-</div>
-<div class="section" id="python-pydev-pythonpath">
-<h1>python.pydev.pythonPath</h1>
-<p>A list of folders that should be added to the <strong>PYTHONPATH</strong> and should be considered source folders
-(i.e.: folders with the sources meant to be edited by the user).</p>
-<p>If not specified, the folders which are in the <strong>PYTHONPATH</strong> and are available below a workspace
-in vscode will be considered as source folders (and if there's no match, each workspace folder in
-vscode will be considered a source folder).</p>
-</div>
-<div class="section" id="python-pydev-forcedbuiltins">
-<h1>python.pydev.forcedBuiltins</h1>
-<p>A  list of additional modules to be inspected through a shell
-(see <a class="reference external" href="http://www.pydev.org/manual_101_interpreter.html#PyDevInterpreterConfiguration-ForcedBuiltins">http://www.pydev.org/manual_101_interpreter.html#PyDevInterpreterConfiguration-ForcedBuiltins</a> for more information).</p>
-</div>
-<div class="section" id="python-pydev-preferredimportlocation">
-<h1>python.pydev.preferredImportLocation</h1>
-<p>The preferred import location to be used on auto-imports and quick-fix to determine the location to add an import. Must be one of:</p>
-<p><strong>global</strong>: Adds the import to the imports in the top of the module.</p>
-<p><strong>topOfMethod</strong>: Adds the import to the top of the current method.</p>
-<p><strong>lineBeforeUsage</strong>: Adds the import just before the line where the import was requested.</p>
-</div>
-<div class="section" id="editor-formatontype">
-<h1>editor.formatOnType</h1>
-<p>When format on type is turned on, PyDev will automatically add some of its auto-editions (such as adding <strong>self</strong> on a method automatically
-or closing a method with <strong>):</strong>).</p>
-</div>
+<p>Welcome to the PyDev for VSCode manual. This document provides an overview of the features, settings, and release history of the PyDev extension for Visual Studio Code.</p>
+
+<h2>Introduction</h2>
+
+<p>PyDev is a powerful Python development environment for Visual Studio Code, offering features such as code completion, real-time code analysis, and integration with popular Python tools and frameworks. This manual will guide you through the key functionalities and configurations available in PyDev.</p>
+
+<h3>Installation</h3>
+
+<p>PyDev is available at:</p>
+
+<ul>
+<li><p>The Visual Studio Code marketplace in <a href="https://marketplace.visualstudio.com/items?itemName=fabioz.vscode-pydev">https://marketplace.visualstudio.com/items?itemName=fabioz.vscode-pydev</a>.</p></li>
+<li><p>The Open VSX Registry in <a href="https://open-vsx.org/extension/fabioz/vscode-pydev">https://open-vsx.org/extension/fabioz/vscode-pydev</a>.</p></li>
+</ul>
+
+<p>Also, it's expected that the <code>Python Debugger (PyDev)</code> extension is also installed and it's required for launching and debugging Python code.</p>
+
+<p>It's available at:</p>
+
+<ul>
+<li><p>The Visual Studio Code marketplace in <a href="https://marketplace.visualstudio.com/items?itemName=fabioz.vscode-pydev-python-debugger">https://marketplace.visualstudio.com/items?itemName=fabioz.vscode-pydev-python-debugger</a>.</p></li>
+<li><p>The Open VSX Registry in <a href="https://open-vsx.org/extension/fabioz/vscode-pydev-python-debugger">https://open-vsx.org/extension/fabioz/vscode-pydev-python-debugger</a>.</p></li>
+</ul>
+
+<h3>Running PyDev for VSCode</h3>
+
+<p>To run, <code>PyDev for VSCode</code> requires <code>java</code>, so, right after installing the extension, when the extension is activated, you should be asked whether
+the extension should download a compatible version of java and use it (which is usually recommended) or if you
+want to specify the path to the <code>JAVA_HOME</code> directory (which is the directory expected to contain the <code>/bin/java</code> executable)
+or whether (alternatively, the <code>python.pydev.java.home</code> setting can be used to specify the path to <code>JAVA_HOME</code> to the
+same effect).</p>
+
+<h3>Specifying the Python interpreter and Python Path</h3>
+
+<p>The Python interpreter and Python Path are used to determine the Python interpreter and PYTHONPATH to be used for code completion,
+code analysis, go to definition, running code, etc. and as such it's the most important thing to be configured (if it's not properly
+configured, the extension will not work as expected and you'll end up having code analysis errors, code completion may not show
+expected completions, etc.).</p>
+
+<p>Since <code>0.14.0</code>, <code>PyDev for VSCode</code> should be able to automatically detect the Python interpreter and source folders for multiple
+projects in the workspace from information found in the <code>.pyproject.toml</code> file (if present) or from a <code>.venv</code> directory
+(if present). See: <a href="multiple_projects_handling.html">Multiple projects handling</a> for more information.</p>
+
+<p>It's possible to disable this feature by setting the <code>python.pydev.autoDetectProjects</code> setting to <code>false</code>. In this case,
+the <code>python.pydev.pythonExecutable</code> and <code>python.pydev.pythonPath</code> settings directly specified in the settings will be used
+(but then, currently only a single interpreter and PYTHONPATH will be used for the whole workspace).</p>
+
+<p>Note that for files that are not found to be a part of any project, the <code>python.pydev.pythonExecutable</code> and <code>python.pydev.pythonPath</code>
+settings will be used as the fallback interpreter and PYTHONPATH.</p>
+
+<h2>Support and Feedback</h2>
+
+<p>For support and feedback, please visit the <a href="https://brainwy.com/tracker/PyDev">PyDev Tracker</a> to report issues or suggest improvements.</p>
 
 			<br>
 			<br>
@@ -367,7 +380,7 @@ or closing a method with <strong>):</strong>).</p>
 	<tr align="center" bgcolor="#eeeeee" valign="middle">
 		<td colspan="10" nowrap="nowrap" class="td_bottom">
 		<center>
-		<p class="header_text">Copyright: Brainwy Software Ltda, 2014-2021</p>
+		<p class="header_text">Copyright: Brainwy Software Ltda, 2014-2025</p>
 		</center>
 		</td>
 	</tr>

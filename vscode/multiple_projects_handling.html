@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="description" content="PyDev Manual" />
 <meta name="keywords" content="pydev, python, ide, eclipse, PyDev, python ide" />
-<title>About</title>
+<title>PyDev on VSCode Multiple Projects Handling</title>
 
 <!-- stylesheet -->
 <link href="stylesheet.css" rel="stylesheet" type="text/css" />
@@ -39,7 +39,7 @@
 		<td nowrap="nowrap" class="td_top3" width="20%"><br/></td>
 
 		<td nowrap="nowrap" class="td_top3" width="10%">
-			<center><p><a href="index.html" class="white_text">Main</a></p></center>
+			<center><p><a href="../index.html" class="white_text">Main</a></p></center>
 		</td>
 
 		<td nowrap="nowrap" class="td_top3" width="10%">
@@ -55,11 +55,11 @@
 		</td>
 
 		<td nowrap="nowrap" class="td_top3" width="10%">
-			<center><p><a href="developers.html" class="white_text">Developers</a></p></center>
+			<center><p><a href="../developers.html" class="white_text">Developers</a></p></center>
 		</td>
 
 		<td nowrap="nowrap" class="td_top3" width="10%">
-			<center><p><a href="about.html" class="white_text">About/Sponsorship</a></p></center>
+			<center><p><a href="../about.html" class="white_text">About/Sponsorship</a></p></center>
 		</td>
 
 		<td nowrap="nowrap" class="td_top3" width="20%"><br/></td>
@@ -74,9 +74,9 @@
 <tbody>
 		<tr bgcolor="#ffffff" >
 			<TD width="15%" class="td_top2" border="0"></TD>
-			<TD width="20%" class="td_top2" border="0"><img alt="PyDev" src="images/pydev_banner3.png"/></TD>
-			<TD width="20%" class="td_top2" border="0" align="right"><a href="vscode/index.html"><img alt="PyDev on VSCode" src="images/sponsors/also_on_vscode.png" border="0"/></a></TD>
-			<TD width="20%" class="td_top2" border="0" align="left"><a href="http://www.liclipse.com/"><img alt="LiClipse" src="images/sponsors/also_see_liclipse.png" border="0"/></a></TD>
+			<TD width="20%" class="td_top2" border="0"><img alt="PyDev" src="../images/pydev_banner3.png"/></TD>
+			<TD width="20%" class="td_top2" border="0" align="right"><a href="../vscode/index.html"><img alt="PyDev on VSCode" src="../images/sponsors/also_on_vscode.png" border="0"/></a></TD>
+			<TD width="20%" class="td_top2" border="0" align="left"><a href="http://www.liclipse.com/"><img alt="LiClipse" src="../images/sponsors/also_see_liclipse.png" border="0"/></a></TD>
 			<TD width="10%" class="td_top2" border="0"></TD>
 
 		</tr>
@@ -158,10 +158,10 @@
 
 
 		<td  width="8%" class="td_right2" align="left">
-		<p><IMG src="images/about.png" border="0" alt=""/></p>
+		<p><IMG src="../images/manual.png" border="0" alt=""/></p>
 		</td>
 		<td  width="30%" class="td_right2" align="left" valign="center">
-		So, what about it?
+		
 		</td>
 
 		<td width="20%" class="td_right" rowspan="2" valign="top">
@@ -234,7 +234,7 @@
 				<!-- end search form -->
 
 			<br/>
-			<a href="http://marketplace.eclipse.org/node/114" title="Favorite at Eclipse Marketplace"><img src="images/marketplace.png" alt="Favorite at Eclipse Marketplace"/></a>
+			<a href="http://marketplace.eclipse.org/node/114" title="Favorite at Eclipse Marketplace"><img src="../images/marketplace.png" alt="Favorite at Eclipse Marketplace"/></a>
 
 			<br/>
             
@@ -273,117 +273,158 @@
 
 
 		<td class="td_right2" align="left" colspan="2">
-			
+			<h1>Multiple projects and interpreters in the workspace</h1>
 
+<p>Since version <code>0.14.0</code>, <code>PyDev for VSCode</code> has the capability to detect multiple projects and interpreters within a workspace.</p>
 
-<!-- <right_area>
-</right_area>
-<image_area>about.png</image_area>
-<quote_area>So, what about it?</quote_area> -->
-    <br/>
-    PyDev enables Eclipse to support Python (and is among the leading tools for Python coding).
+<p>This means that each folder in the workspace can have its own interpreter or source folder settings, which are automatically detected through a series of heuristics.</p>
 
-    It's also an open source project created by Aleks Totic in 2003 and kept going
-    by Fabio Zadrozny since 2005.
-    <br/>
-    <br/>
+<p>By default, this feature is enabled, however, if want more control and can  work with a single project for the entire workspace, you can disable this feature by setting <code>python.pydev.autoDetectProjects</code> to <code>false</code>. In this case, the whole workspace will use the settings specified by <code>python.pydev.pythonInterpreter</code> and <code>python.pydev.pythonPath</code> (otherwise, these settings will be used just as a fallback for python files that are not part of any project).</p>
 
-    <div><strong>Become corporate sponsor:</strong><br/>
-    <p style="padding-left:10px;">To keep on being developed, PyDev relies on financial contributions
-    from its user community and corporate sponsors.
-    <br/>
-    <br/>
-    <strong>Corporate Sponshorship</strong> also enables adding a <strong>logo with a link</strong> in the main <a href=http://pydev.org>pydev.org</a> homepage.<br/>
-    <br/>
-    It's possible to become (or renew) a corporate sponsor by using the payment links below:<br/>
-    <br/>
-    <strong>Gold Sponsor</strong>: <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=DMGTE6TFFZT6N">$1000 (PayPal)</a><br/>
-    <strong>Silver Sponsor</strong>: <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=LVCTS496Q88VL">$500 (PayPal)</a><br/>
-    <strong>Bronze Sponsor</strong>: <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=HY9KCJS3KNJ3S">$300 (PayPal)</a><br/>
+<h3>Heuristic 1: Sema4ai VSCode Extension</h3>
 
-    <br/>
-    For Payments using Stripe access: <a href="https://www.brainwy.com/stripe_payment_pydev/">PyDev Stripe Payments (at brainwy.com)</a><br/>
-    <br/>
-    After the payment, the logo and link to be added must be sent to: fabioz at brainwy.com<br/>
-    <br/>
-    -- Note: each contribution level has a different size and placement for the logo.<br/>
-    -- Note: the logo will feature for <strong>1 year</strong> in the <a href=http://pydev.org>pydev.org</a> homepage.
-    </p>
-    <br/>
+<p>If the <code>Sema4ai VSCode Extension</code> is installed, it will be queried to resolve the interpreter or PYTHONPATH for a file. This process should automatically create an interpreter based on the <code>package.yaml</code> or <code>robot.yaml</code> file if available. If the extension is not installed or fails to resolve the interpreter, alternative heuristics are applied.</p>
 
-    <strong>Benefits of other PyDev contributions:</strong><br/>
-    <p style="padding-left:10px;">
-    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XXGMKP7XVZ3CW">$7</a> &nbsp;&nbsp;&nbsp;<strong>PyDev Supporter</strong>&nbsp;&nbsp; name in <a href="https://www.brainwy.com/supporters/PyDev/">supporters page</a><br/>
-    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PPABWM3KRSDKE">$20</a> &nbsp;&nbsp;<strong>PyDev Friend</strong>&nbsp;&nbsp; name &amp; link in <a href="https://www.brainwy.com/supporters/PyDev/">supporters page</a><br/>
-    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZJEEDKWNU9XRG">$45</a> &nbsp;&nbsp;<strong>PyDev Knight</strong>&nbsp;&nbsp; name &amp; link in <a href="https://www.brainwy.com/supporters/PyDev/">supporters page</a> and 1 vote in <a href="https://www.brainwy.com/">tracker</a><br/>
-    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FHNGPJDGDQLPC">$100</a> &nbsp;<strong>PyDev Mage</strong>&nbsp;&nbsp; name &amp; link &amp; logo in <a href="https://www.brainwy.com/supporters/PyDev/">supporters page</a> and 2 votes in <a href="https://www.brainwy.com/">tracker</a><br/>
-    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=66NCSKDGNAWCC">$200</a> &nbsp;<strong>PyDev Oracle</strong>&nbsp;&nbsp; name &amp; link &amp; logo in <a href="https://www.brainwy.com/supporters/PyDev/">supporters page</a> and 5 votes in <a href="https://www.brainwy.com/">tracker</a><br/>
-    <br/>
-    For Payments through Stripe access: <a href="https://www.brainwy.com/stripe_payment_pydev/">PyDev Stripe Payments (at brainwy.com)</a><br/>
-    <br/>
-    -- Note: entries in the supporters page will appear for <strong>2 years</strong>.
-    </p><br/>
+<h3>Heuristic 2: finding the folders to be used in the PYTHONPATH</h3>
 
+<p>To determine the folders to be used in the <code>PYTHONPATH</code>, the following steps are taken:</p>
 
-    <strong>General questions:</strong><br/>
-    <p style="padding-left:10px;">
-    <a href="http://stackoverflow.com/questions/tagged/pydev">StackOverflow (with the PyDev tag)</a></p><br/>
+<ul>
+<li>If a <code>pyproject.toml</code> file is found, its contents are used to create a scoped project, with source folders derived from the information within the file. This includes support for <code>poetry</code> projects. If <code>tool.poetry.packages</code> is found, and projects contain entries with a <code>path</code>, those entries define the <code>PYTHONPATH</code> (source folders). Additionally, if <code>tool.poetry.dependencies</code> or <code>tool.poetry.dev.dependencies</code> are present, those dependent projects are also scanned for source folder dependencies.</li>
+<li>If <code>tool.mypy.mypy_path</code> is found, the folders defined there are used as the <code>PYTHONPATH</code>.</li>
+<li>If none of the above heuristics match, default folders such as <code>src</code>, <code>sources</code>, <code>source</code>, <code>test</code>, and <code>tests</code> are used as the <code>PYTHONPATH</code>.</li>
+<li>If these folders are not found, the directory containing the <code>pyproject.toml</code> file is used as the <code>PYTHONPATH</code>.</li>
+</ul>
 
-    <strong>Report issues/features: </strong><br/>
-    <p style="padding-left:10px;">
-    <a href="https://www.brainwy.com">Brainwy Tracker</a><br/><br/>
-    </p>
+<h3>Heuristic 3: finding the interpreter</h3>
 
-    <strong>Code questions:</strong><br/>
-    <p style="padding-left:10px;">
-    <a href="http://lists.sourceforge.net/lists/listinfo/pydev-code">pydev-code list</a><br/><br/></p>
+<p>For finding the interpreter, the following heuristics are used:</p>
 
-    <strong>Source Code:</strong><br/>
-    <p style="padding-left:10px;">
-    <a href="https://github.com/fabioz/Pydev">github.com/fabioz/Pydev</a></p><br/>
+<ul>
+<li>If a virtual environment folder (identified by having a <code>pyvenv.cfg</code> file inside it, typically named <code>.venv</code>) is found, it will be used as the interpreter for the project.</li>
+<li>If a conda environment with the same name as the <code>project.name</code> or <code>tool.poetry.name</code> defined in the <code>pyproject.toml</code> file is found, that conda environment will be used as the interpreter (may require setting <code>python.pydev.conda.location</code> to the path where the conda executable is located if it's not in the <code>PATH</code>).</li>
+</ul>
 
-    <strong>Blog:</strong><br/>
-    <p style="padding-left:10px;">
-    <a href="http://pydev.blogspot.com">pydev.blogspot.com</a></p><br/>
+<p>It is important to note that the interpreter is neither updated nor created by the extension. <code>PyDev</code> uses the interpreters it finds, so if you are using tools like <code>poetry</code>, <code>uv</code>, or <code>conda</code> to manage your Python environment, you should continue using them.</p>
 
-    <strong>License: EPL (Eclipse Public License)</strong><br/>
-    <p style="padding-left:10px;">
-    <a href="http://www.eclipse.org/legal/epl-v10.html">www.eclipse.org/legal/epl-v10.html</a></p><br/>
+<h2>Examples</h2>
 
-<strong>E-mail:</strong><br/>
-    <p style="padding-left:10px;">
-Please use this only if you <strong>really</strong> can't make your comments public: fabioz at brainwy.com</p>
+<h3>Example: a project using a <code>pyproject.toml</code> with a dependency on another project (from poetry)</h3>
 
-<br/>
-</div><br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+<p>By having a structure like this:</p>
+
+<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee; font-size: 12px; border: 1px dashed #999999; line-height: 14px; padding: 5px; overflow: auto; width: 100%">
+<code style="color:#000000;word-wrap:normal;">
+my_project1/
+├── src/
+│   └── my_package/
+│       └── my_module1.py
+├── tests/
+│   └── test_my_module1.py
+├── pyproject.toml
+
+my_project2/
+└── my_package2/
+   └── my_module2.py
+├── tests/
+│   └── test_my_module2.py
+├── pyproject.toml
+</code></pre>
+
+<p><strong>pyproject.toml</strong> (from <code>my_project1</code>)</p>
+
+<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee; font-size: 12px; border: 1px dashed #999999; line-height: 14px; padding: 5px; overflow: auto; width: 100%">
+<code style="color:#000000;word-wrap:normal;">
+[project]
+name = "my_project1"
+version = "0.1.0"
+
+[tool.poetry]
+packages = [{ include = "my_package", from = "src" }] # tool.poetry.packages is analyzed by `PyDev` to find the folders with python sources (must be in `from=`)
+
+[tool.poetry.dependencies]  # tool.poetry.dependencies and tool.poetry.group.dev.dependencies are analyzed by `PyDev` to find project dependencies.
+python = "^3.10"
+my_project2 = { path = "../my_project2/" }
+
+[tool.mypy]
+mypy_path = "src:tests" # The `tool.mypy.mypy_path` is analyzed by `PyDev` to find the folders with python sources.
+</code></pre>
+
+<p><strong>pyproject.toml</strong> (from <code>my_project2</code>)</p>
+
+<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee; font-size: 12px; border: 1px dashed #999999; line-height: 14px; padding: 5px; overflow: auto; width: 100%">
+<code style="color:#000000;word-wrap:normal;">
+[project]
+name = "my_project2"
+version = "0.1.0"
+
+[tool.poetry]
+packages = [{ include = "my_package2", from = "." }] # tool.poetry.packages is analyzed by `PyDev` to find the folders with python sources (must be in `from=`)
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.mypy]
+mypy_path = "src:tests" # The `tool.mypy.mypy_path` is analyzed by `PyDev` to find the folders with python sources.
+</code></pre>
+
+<p>In this case, when bootstrapping the interpreter with <code>poetry</code>, <code>PyDev</code> will detect the dependency from <code>my_project1</code> to <code>my_project2</code> and will build the PYTHONPATH with the folders that should be considered source folders from both projects accordingly.</p>
+
+<p>Regarding the interpreter, there are actually 2 choices here: either the interpreter should be in a <code>.venv</code>, right next to the <code>pyproject.toml</code> file, or it should be in a conda environment with the same name as the <code>project.name</code> or <code>tool.poetry.name</code> defined in the <code>pyproject.toml</code> file (note that the interpreter needs to be manually created externally, PyDev does not update or create interpreters, it just uses the ones it finds).</p>
+
+<h3>Example: a project using a <code>Sema4ai VSCode Extension</code> project</h3>
+
+<p>By having a structure like this:</p>
+
+<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee; font-size: 12px; border: 1px dashed #999999; line-height: 14px; padding: 5px; overflow: auto; width: 100%">
+<code style="color:#000000;word-wrap:normal;">
+my_project/
+├── src/
+│   └── my_module.py
+├── tests/
+│   └── test_my_module.py
+├── package.yaml
+</code></pre>
+
+<p><strong>package.yaml</strong></p>
+
+<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee; font-size: 12px; border: 1px dashed #999999; line-height: 14px; padding: 5px; overflow: auto; width: 100%">
+<code style="color:#000000;word-wrap:normal;">
+name: my_project
+version: 0.1.0
+spec-version: v2
+
+dependencies:
+  conda-forge:
+    - python=3.11.11
+    - uv=0.4.19
+
+  pypi:
+    - sema4ai-actions=1.3.0
+
+dev-dependencies:
+  conda-forge:
+    - pytest=8.3.3
+  pypi:
+    - ruff=0.7.0
+    - mypy=1.13.0
+
+pythonpath:
+  - src
+  - tests
+</code></pre>
+
+<p>When the <code>my_module.py</code> file is opened, <code>PyDev</code> will automatically detect the <code>my_project</code> project and use the interpreter defined in the <code>package.yaml</code> file to have an interpreter with the dependencies defined in the <code>package.yaml</code> file along with the given PYTHONPATH (note that it always bootstraps the interpreter with the <code>dev-dependencies</code>).</p>
+
+<p><strong>Note</strong>: <code>PyDev</code> should automatically detect and update its internal caches as needed, but if changes are made and <code>PyDev</code> does not automatically detect them, you can use the command <code>PyDev: Clear caches</code> to clear the internal caches and force a re-detection.</p>
+
+<p>If the issue persists, please report to https://brainwy.com/tracker/PyDev to improve the heuristics.</p>
+
+<p><strong>Note</strong>: When searching for symbols, only those from the project associated with the last active Python file are considered if multiple projects are detected in the workspace.</p>
+
+<p><strong>Note</strong>: A new setting, <code>decorations.pySourceFolderContents.enabled</code>, can be set to <code>true</code> to make it easier to see which files are part of the detected projects in the EXPLORER view.</p>
+
+<p>This setting makes <code>PyDev</code> add a <code>PY</code> decoration to folders and files identified as part of source folders in the <code>EXPLORER</code> view, making it easier to quickly identify which files are part of the detected projects in <code>PyDev</code>.</p>
 
 			<br>
 			<br>
