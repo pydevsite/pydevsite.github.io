@@ -20,8 +20,8 @@
 	<tr align="center" bgcolor="#eeeeee" valign="top">
 		<td nowrap="nowrap" class="td_top">
 		<center>
-		<p class="header_text">Last Site Update: January 28th, 2025 |
-		Latest Version: 12.2.0</p>
+		<p class="header_text">Last Site Update: February 3rd, 2025 |
+		Latest Version: 13.0.0</p>
 		</center>
 		</td>
 	</tr>
@@ -799,6 +799,44 @@ shuffleEntries("gold-sponsors-a-hrefs", 4);
 <h1>Supporting PyDev</h1>
 <p>Thank you to all PyDev supporters: <a class="reference external" href="https://www.brainwy.com/supporters/PyDev">https://www.brainwy.com/supporters/PyDev</a>.</p>
 <p>To show your appreciation for PyDev and to keep it going strong, help to crowdfund it through <a class="reference external" href="https://www.patreon.com/fabioz">https://www.patreon.com/fabioz</a>.</p>
+</div>
+<div class="section" id="release-13-0-0-2025-02-03">
+<h1>Release 13.0.0 (2025-02-03)</h1>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt><strong>Updates &amp; Improvements</strong></dt>
+<dd><ul class="first last">
+<li>Support for Python 3.13</li>
+<li>Support for type alias syntax</li>
+<li>Parsing type vars (still missing semantic analysis).</li>
+<li>Support for <strong>Annotated[cls]</strong> in code-completion</li>
+<li>Added <strong>condition</strong> to resolve as <strong>True|False</strong> in templates</li>
+<li>Updated typeshed</li>
+<li>Updated PyDev debugger (pydevd) to version 3.3.0</li>
+<li>Updated minimum Java version requirement to Java 17</li>
+<li>Changed <strong>ruff</strong> linting command to <strong>ruff check</strong> to match breaking change</li>
+<li>Improved docstring assist to properly handle multi-line function signatures</li>
+<li>Converted paragraph wrapping functionality from Jython to Java</li>
+<li>Changed &quot;Surround with try..except&quot; to use <strong>try..except Exception</strong> as default</li>
+<li>Supporting trailing commas in multi-line <strong>with</strong> statements</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>Bug Fixes</strong></dt>
+<dd><ul class="first last">
+<li>Fixed recursion error that could occur during interpreter restoration</li>
+<li>Fixed <strong>with_statement</strong> import handling in auto-import</li>
+<li>Fixed issue where local imports were incorrectly placed within arguments</li>
+<li>Fixed issue with paragraph wrapping on last line</li>
+<li>Fixed exception handling for project configuration variables</li>
+<li>Improved logging to avoid stack traces for non-error messages</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
 </div>
 <div class="section" id="release-12-2-0-2024-09-03">
 <h1>Release 12.2.0 (2024-09-03)</h1>
