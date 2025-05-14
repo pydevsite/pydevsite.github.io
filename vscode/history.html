@@ -20,7 +20,7 @@
 	<tr align="center" bgcolor="#eeeeee" valign="top">
 		<td nowrap="nowrap" class="td_top">
 		<center>
-		<p class="header_text">Last Site Update: March 2nd, 2025 |
+		<p class="header_text">Last Site Update: May 14th, 2025 |
 		Latest Version: 13.0.2</p>
 		</center>
 		</td>
@@ -274,6 +274,21 @@
 
 		<td class="td_right2" align="left" colspan="2">
 			<h2>History For PyDev on VSCode</h2>
+
+<h3>Release 0.15.2</h3>
+
+<ul>
+<li>When doing a launch, the env variable is properly merged with the env variable from the launch configuration.</li>
+</ul>
+
+<h3>Release 0.15.1</h3>
+
+<ul>
+<li>Fixed caching issue when auto-computing interpreter information (information was computed properly but not applied due to bad caching).</li>
+<li>Handle case where module.body could be null.</li>
+<li>Improve type inference engine to deal with TypeAlias.</li>
+<li>Fixes in code analysis to deal with TypeAlias.</li>
+</ul>
 
 <h3>Release 0.15.0</h3>
 
