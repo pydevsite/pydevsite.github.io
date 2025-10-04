@@ -20,7 +20,7 @@
 	<tr align="center" bgcolor="#eeeeee" valign="top">
 		<td nowrap="nowrap" class="td_top">
 		<center>
-		<p class="header_text">Last Site Update: September 21st, 2025 |
+		<p class="header_text">Last Site Update: October 4th, 2025 |
 		Latest Version: 13.1.0</p>
 		</center>
 		</td>
@@ -274,6 +274,39 @@
 
 		<td class="td_right2" align="left" colspan="2">
 			<h2>History For PyDev on VSCode</h2>
+
+<h3>Release 0.16.0</h3>
+
+<ul>
+<li><p>Updated PyDev to <code>13.1.0</code>.</p>
+
+<ul>
+<li><p>Updates &amp; Improvements</p>
+
+<ul>
+<li>It's now possible to use <strong>pyright</strong> analysis support</li>
+<li><strong>pydevd</strong> (debugger) updated to <strong>3.4.1</strong>
+<ul>
+<li>Preliminary support for debugging with <strong>Python 3.14</strong> (still not complete)</li>
+</ul></li>
+<li>Consider <strong>@abstractclassmethod</strong> and <strong>@abstractstaticmethod</strong> decorators in code analysis.</li>
+<li>Use plain <strong>super()</strong> in override completion.</li>
+</ul></li>
+<li><p>Bug Fixes</p>
+
+<ul>
+<li>If a default interpreter cannot be found, the latest Python 3 version is used to parse the code.</li>
+<li>Type definition in non-global scope (inside a method) should not give an error if the token is just found in the TYPE_CHECKING namespace.</li>
+<li>Fixed issues dealing with name store in match where spurious unused variable would be found. <strong>#PyDev-1272</strong></li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h3>Release 0.15.4</h3>
+
+<ul>
+<li>Fixed an issue finding interpreter in the workspace root when that same configuration would be used in a sub-folder.</li>
+</ul>
 
 <h3>Release 0.15.3</h3>
 
